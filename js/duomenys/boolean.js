@@ -8,7 +8,7 @@ Boolean - logines reiksmes
 Boolean logikos operatoriai:
 - && (and)    // turi tenkinti visas salygas true
 - || (or)    // (arba) turi tenkinti bent viena salyga true
-- !  (not)
+- !  (not)  // daugiau nei 2 sauktukai nerasyti
 */
 
 const username = 'Jonas';
@@ -57,8 +57,12 @@ console.log('---------------');
 console.log(true || true && false);
 
 
+
+
 // namu darbas israsyti visas imanomas kombinacijas su keturiais operatoriais &&  ir ||  (2**7 =  128 kombinacijos)
 console.log(true || true && false || true);
+
+
 
 console.log('---------------');
 console.log(!true);
