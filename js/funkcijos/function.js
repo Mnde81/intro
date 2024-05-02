@@ -108,4 +108,4 @@ function words(w1, w2, w3) {
     return sentence;
 }
 
-console.log(words('labas', 'rytas', 'Lietuva'));
+console.log(words('Labas', 'rytas', 'Lietuva'));

@@ -58,14 +58,90 @@ console.log(true || true && false);
 
 
 
-
-// namu darbas israsyti visas imanomas kombinacijas su keturiais operatoriais &&  ir ||  (2**7 =  128 kombinacijos)
-console.log(true || true && false || true);
-
-
-
 console.log('---------------');
 console.log(!true);
 console.log(!false);
 console.log(!!false);  // daugiau nei 2 sauktukai - nerasyti
+
+
+console.log('---------------');
+
+// namu darbas israsyti visas imanomas kombinacijas su keturiais operatoriais &&  ir ||  (2**7 =  128 kombinacijos)
+console.log(true || true && false || true);
+console.log('---------------');
+
+console.log(true && true && true && true);
+console.log(false && true && true && true);
+console.log(true && false && true && true);
+console.log(true && true && false && true);
+console.log(true && true && true && false);
+console.log(true && false && false && true);
+console.log(true && false && false && false);
+console.log(false && false && false && false);
+console.log(false && true && false && false);
+console.log(false && false && true && false);
+console.log(false && false && false && true);
+console.log('---------------');
+console.log(true || true || true || true);
+console.log(false || true || true || true);
+console.log(false || false || true || true);
+console.log(false || false || false || true);
+console.log(false || false || false || false);
+console.log(true || false || true || true);
+console.log(true || true || false || true);
+console.log(true || true || true || false);
+console.log(false || false || true || true);
+console.log(true || false || false || true);
+console.log(true || true || false || false);
+console.log(true || false || false || false);
+
+console.log('---------------');
+console.log(true || true && true || true);
+console.log(false || true && true || true);
+console.log(true || false && true || true);
+console.log(true || true && true || false);
+console.log(true || false && false || true);
+console.log(true || false && false || false);
+console.log(false || false && false || false);
+console.log(true || false && false || true);
+console.log(true || true && false || false);
+console.log(false || false && true || true);
+console.log(false || false && false || true);
+console.log('---------------');
+console.log(true && true && true || true);
+console.log(false && true && true || true);
+console.log(false && false && true || true);
+console.log(false && false && false || true);
+console.log(false && false && false || false);
+console.log(true && false && true || true);
+console.log(true && true && false || true);
+console.log(true && true && true || false);
+console.log(true && false && false || true);
+console.log(true && false && false || false);
+console.log('---------------');
+console.log(true || true && true && true);
+console.log(false || true && true && true);
+console.log(false || false && true && true);
+console.log(false || false && false && true);
+console.log(false || false && false && false);
+console.log(true || false && false && true);
+console.log(false || true && true && false);
+console.log('---------------');
+console.log(true || true || true && true);
+console.log(false || true || true && true);
+console.log(false || false || true && true);
+console.log(false || false || false && true);
+console.log(false || false || false && false);
+console.log('---------------');
+console.log(true && true || true || true);
+console.log(false && true || true || true);
+console.log(false && false || true || true);
+console.log(false && false || false || true);
+console.log(false && false || false || false);
+console.log('---------------');
+console.log(true && true || true && true);
+console.log(false && true || true && true);
+console.log(false && false || true && true);
+console.log(false && false || false && true);
+console.log(false && false || false && false);
 
