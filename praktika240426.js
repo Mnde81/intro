@@ -242,8 +242,10 @@ const massJohn1 = 92;
 const heightMark1 = 1.69;
 const heightJohn1 = 1.95;
 
-const bmiMark1 = massMark1 / heightMark1 ** 2
-const bmiJohn1 = massJohn1 / heightJohn1 ** 2
+let bmiMark1 = massMark1 / heightMark1 ** 2;
+bmiMark1 = bmiMark1.toFixed(2);
+let bmiJohn1 = massJohn1 / heightJohn1 ** 2;
+bmiJohn1 = bmiJohn1.toFixed(2);
 const markHigherBMI1 = bmiMark1 > bmiJohn1;
 console.log(markHigherBMI1);
 
@@ -253,10 +255,29 @@ const massJohn2 = 85;
 const heightMark2 = 1.88;
 const heightJohn2 = 1.76;
 
-const bmiMark2 = massMark2 / heightMark2 ** 2
-const bmiJohn2 = massJohn2 / heightJohn2 ** 2
+let bmiMark2 = massMark2 / heightMark2 ** 2;
+bmiMark2 = bmiMark2.toFixed(2);
+let bmiJohn2 = massJohn2 / heightJohn2 ** 2;
+bmiJohn2 = bmiJohn2.toFixed(2);
 const markHigherBMI2 = bmiMark2 > bmiJohn2;
 console.log(markHigherBMI2);
+
+if (bmiMark1 > bmiJohn1) {
+    result1 = 'Mark\'s BMI ' + bmiMark1 + ' is higher than John\'s ' + bmiJohn1 + ' !'
+} else {
+    result1 = 'John\'s BMI ' + bmiJohn1 + ' is higher than Mark\'s ' + bmiMark1 + ' !'
+}
+
+console.log(result1);
+
+
+if (bmiMark2 > bmiJohn2) {
+    result2 = 'Mark\'s BMI ' + bmiMark2 + ' is higher than John\'s ' + bmiJohn2 + ' !'
+} else {
+    result2 = 'John\'s BMI ' + bmiJohn2 + ' is higher than Mark\'s ' + bmiMark2 + ' !'
+}
+
+console.log(result2);
 
 
 
