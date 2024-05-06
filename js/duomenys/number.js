@@ -11,7 +11,7 @@ NUMBERS
 
 
 Matematiniai operatoriai:
-- aritmetiniai +, -, /, *, **, %
+- aritmetiniai +, -, /, *, **, %, ++, --
 - priskyrimo +=, -=, /=, *=, **=, %= 
 
 
@@ -163,5 +163,18 @@ console.clear();
 
 
 
+let makaronai = 2;
+
+makaronai++;
+console.log(makaronai);
+
+
+let g = 6;
+
+console.log(g);
+// pirmiau spausdina, po to padidina
+console.log(g++);
+// pirmiau padidina, po to spausdina
+console.log(++g);
 
 
