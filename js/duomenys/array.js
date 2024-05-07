@@ -52,3 +52,42 @@ sum3 += marks[index++];
 sum3 += marks[index++];
 
 console.log(sum3);
+
+console.clear();
+
+
+function marksAverage(marks) {
+    if (marks.length === 0) {
+        return 'Vidurkis: nera pazymiu.';
+    }
+
+    let sum = 0;
+    if (marks.length > 0) {
+        sum += marks[0];
+    }
+    if (marks.length > 1) {
+        sum += marks[1];
+    }
+    if (marks.length > 2) {
+        sum += marks[2];
+    }
+
+    /// ???? reikia sprendimo su ciklais
+    return 'Vidurkis: ' + (sum / marks.length);
+}
+
+const jonoPazymiai = [];
+
+console.log(marksAverage(jonoPazymiai));
+
+jonoPazymiai.push(10);
+console.log(jonoPazymiai);
+console.log(marksAverage(jonoPazymiai));
+
+jonoPazymiai.push(2);
+console.log(jonoPazymiai);
+console.log(marksAverage(jonoPazymiai));
+
+jonoPazymiai.push(8);
+console.log(jonoPazymiai);
+console.log(marksAverage(jonoPazymiai));
