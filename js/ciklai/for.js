@@ -85,3 +85,4 @@ console.log(marksAverage(jonas));
 console.log(marksAverage(maryte));
 console.log(marksAverage(petras));
 console.log(marksAverage(ona));
+

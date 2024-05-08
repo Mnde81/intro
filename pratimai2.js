@@ -4,7 +4,7 @@
 
 
 let suma1 = 0;
-for (let i = 0; i < 0; i++) {
+for (let i = 0; i <= 0; i++) {
     suma1 += i;
 }
 console.log(suma1);
@@ -47,6 +47,23 @@ console.log(suma6);
 console.log('--------------------');
 
 
+// sprendimas su funkcija
+
+function intervalSum(start, finish) {
+    let answer = 0;
+    for (let i = start; i <= finish; i++) {
+        answer += i;
+    }
+    return answer;
+}
+
+console.log(intervalSum(13, 21));
+
+
+
+console.log('--------------------');
+
+
 // 2.
 
 const words = 'abcdef'
@@ -56,6 +73,22 @@ const words = 'abcdef'
         console.log(words[words.length - 1 - i]);
     }
 
+
+// sprendimas su funcija (iraso i viena eilute)
+
+    function reverseString(text) {
+        let answer = '';
+        for (let i = 0; i < text.length; i++) {
+            answer += text[text.length - 1 -i ];
+        // arba:  answer = text[i] + answer;
+        }
+
+    
+        return answer;
+    }
+
+    console.log(reverseString('labukas'));
+    console.log(reverseString('vakaras'));
 
 console.log('--------------------');
 
@@ -174,12 +207,34 @@ for (let i = -18; i <=18; i++) {
 }
 console.log('Skaiciu intervale tarp -18 ir 18, besidalijanciu be liekanos is 7 yra ' + beLiek9 + ' vienetai.');
 
+console.log('--------------------');
+console.log('--------------------');
 
 
+// sprendimas su funkcija 
 
+function numberCount(start, finish, step) {
+    let answer = 0;
+    for (let i = start; i <= finish; i++) {
+        // console.log('>>>', i % step);
 
+        if (i % step === 0) {
+            answer++;
+        }
+       
+    }
 
-
-
-
+    return 'Skaiciu intervale tarp ' + start + ' ir ' + finish + ', besidalijanciu be liekanos is ' + step + ' yra ' + answer + ' vienetai.';
+}
+console.log(numberCount(0, 11, 3));
+console.log(numberCount(0, 11, 5));
+console.log(numberCount(0, 11, 7));
+console.log('--------------------');
+console.log(numberCount(8, 31, 3));
+console.log(numberCount(8, 31, 5));
+console.log(numberCount(8, 31, 7));
+console.log('--------------------');
+console.log(numberCount(-18, 18, 3));
+console.log(numberCount(-18, 18, 5));
+console.log(numberCount(-18, 18, 7));
 
