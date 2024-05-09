@@ -1,6 +1,6 @@
 /*
 
-- jeigu, pirmasar pametras nera skaicius
+- jeigu, pirmas parametras nera skaicius
         - graziname klaidos pranesima
 - jeigu, antras parametras nera skaicius
         - graziname klaidos pranesima
