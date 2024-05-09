@@ -56,7 +56,7 @@ function didziausiasSkaiciusSarase(reiksme) {
         return 'Pateiktas sarasas negali buti tuscias';
         } else {
         let largest = 0;
-        for(i = 0; i < reiksme.length; i++){
+        for(let i = 0; i < reiksme.length; i++){
             if (reiksme[i] > largest) {
                 largest = reiksme[i];
             }
@@ -72,3 +72,71 @@ console.log(didziausiasSkaiciusSarase([69, 69, 69, 69, 66]));
 // rezultatas = 0 ????  console.log(didziausiasSkaiciusSarase([-1, -2, -3, -4, -5, -6, -7, -8]));
 console.log(didziausiasSkaiciusSarase('pomidoras'));
 console.log(didziausiasSkaiciusSarase([]));
+
+console.log('--------------------');
+
+
+
+// 5.
+
+function isrinktiRaides(text, step) {
+    let resultText = '';
+    if (typeof text !== 'string') {
+        return 'Pirmasis kintamasis yra netinkamo tipo.';
+    } else if (text.length === 0) {
+        return 'Pirmojo kintamojo reiksme yra netinkamo dydzio.';
+    } else if (text.length > 100) {
+        return 'Pirmojo kintamojo reiksme yra netinkamo dydzio.';
+    } else if (typeof step !== 'number') {
+        return 'Antrasis kintamasis yra netinkamo tipo';
+    } else if (step <= 0) {
+        return 'Antrasis kintamasis turi buti didesnis uz nuli.';
+    } else if (step > text.length) {
+        return 'Antrasis kintamas turi buti ne didesnis uz pateikto teksto ilgi.'
+    } else {
+        
+        for (let i = step -1; i < text.length; i += step) {
+            resultText = resultText + text[i];
+
+    }
+        
+        }
+        return resultText;
+    }
+
+
+
+
+console.log(isrinktiRaides('abcdefg', 2));
+console.log(isrinktiRaides('abcdefghijkl', 3));
+console.log(isrinktiRaides('abc', 0));
+console.log(isrinktiRaides('abc', 4));
+console.log(isrinktiRaides(1561, 2));
+
+console.log('--------------------');
+
+
+// 6.
+
+function dalyba(num1, num2) {
+    if (num2 === 0) {
+        return 'Dalyba is nulio negalima.';
+    } else if (typeof num1 === 'string') {
+        return 'Pateikta netinkamo tipo reiksme.';
+    } else if (typeof num2 === 'string') {
+        return 'Pateikta netinkamo tipo reiksme.';
+    } else if (typeof num1 === 'boolean') {
+        return 'Pateikta netinkamo tipo reiksme.';
+    } else if (typeof num2 === 'boolean') {
+        return 'Pateikta netinkamo tipo reiksme.';
+    } 
+    return num1 / num2;
+}
+
+console.log(dalyba(2, 0));
+console.log(dalyba('abc', 2));
+console.log(dalyba(3, 'abc'));
+console.log(dalyba(5, true));
+console.log(dalyba(false, 4));
+
+console.log(dalyba(-100, 20));
