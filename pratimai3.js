@@ -12,11 +12,36 @@ console.log('--------------------');
 // 2.
 
 function daugyba(skaicius1, skaicius2) {
-    return skaicius1 * skaicius2;
+    const answer = skaicius1 * skaicius2;
+    return answer;
 }
 console.log(daugyba(2, 2));
 console.log(daugyba(6, 5));
 console.log(daugyba(10, 12));
+
+console.log(daugyba(2, Infinity));
+console.log(daugyba(Infinity, Infinity));
+console.log(daugyba(2, NaN));
+console.log(daugyba(-NaN, NaN));
+console.log(daugyba(5, 'Labas'));
+console.log(daugyba(5, 'Labas'.length));
+console.log(daugyba(5, []));
+console.log(daugyba(5, [].length));
+console.log(daugyba(5, [7]));
+console.log(daugyba(5, [7].length));
+console.log(daugyba(5, [7, 2]));
+console.log(daugyba(5, [7, 2].length));
+console.log(daugyba(5, true));
+console.log(daugyba(5, false));
+console.log(daugyba(5, undefined));
+console.log(daugyba(5, null));
+console.log(daugyba(5, daugyba));
+console.log(daugyba(5, daugyba()));
+console.log(daugyba(5, daugyba(2, 4)));
+console.log(daugyba(5, (2 * 4)));
+console.log(daugyba(5));
+console.log(daugyba());
+
 
 console.log('--------------------');
 
@@ -140,3 +165,4 @@ console.log(dalyba(5, true));
 console.log(dalyba(false, 4));
 
 console.log(dalyba(-100, 20));
+console.log(dalyba(55, 4));
