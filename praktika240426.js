@@ -332,5 +332,23 @@ console.log('As esu ' + nameJono + ' ' + surnameJono + '.' + ' Man yra ' + ageJo
 console.clear();
 
 
+function enough(cap, on, wait) {
+    let spaceLeft = 0;
+    let answer = 0;
+    spaceLeft = cap - on;
+    if (spaceLeft >= wait) {
+        return 0;
+    } else {
+        answer = wait - spaceLeft; 
+    }
+    return answer;
+  }
+
+  console.log(enough(10, 5, 6));
+
+
+  console.clear();
+
+
 
 
