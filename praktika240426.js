@@ -326,3 +326,11 @@ const nowDate = 2024;
 const ageJono = nowDate - bornDate;
 
 console.log('As esu ' + nameJono + ' ' + surnameJono + '.' + ' Man yra ' + ageJono + ' metai(u).');
+
+
+
+console.clear();
+
+
+
+
