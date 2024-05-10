@@ -344,5 +344,128 @@ function enough(cap, on, wait) {
   console.clear();
 
 
-  
 
+  function switchItUp(number){
+ if (number === 1) {
+  return 'One';
+ }
+ if (number === 0) {
+  return 'Zero';
+ }
+ if (number === 2) {
+  return 'Two';
+ }
+ if (number === 3) {
+  return 'Three';
+ }
+ if (number === 4) {
+  return 'Four';
+ }
+ if (number === 5) {
+  return 'Five';
+ }
+ if (number === 6) {
+  return 'Six';
+ }
+ if (number === 7) {
+  return 'Seven';
+ }
+ if (number === 8) {
+  return 'Eight';
+ }
+ if (number === 9) {
+  return 'Nine';
+ }
+}
+  
+console.log(switchItUp(8));
+
+
+console.clear();
+
+
+
+function greet() {
+  return 'hello world';
+}
+
+console.clear();
+
+
+function simpleMultiplication(number) {
+  if (number % 2 === 0) {
+    return number * 8;
+  } else {
+    return number * 9;
+  }
+}
+
+console.log(simpleMultiplication(8));
+
+
+console.clear();
+
+
+
+function addFive(num) {
+  let total = num + 5
+  return total;
+}
+console.log(addFive(5));
+
+
+console.clear();
+
+
+function problem(x){
+  if (typeof x === 'string') {
+    return 'Error'
+  } else {
+    return x * 50 +6;
+  }
+}
+console.log(problem(4));
+
+
+console.clear();
+
+
+
+function capitalizeWord(word) {
+  let result = word.charAt(0).toUpperCase() + word.slice(1);
+  return result;
+}
+
+console.log(capitalizeWord('hello'))
+
+
+console.clear();
+
+
+
+function contamination(text, char){
+  let result = '';
+  if (text === '') {
+    return '';
+  }
+  if (char === '') {
+    return '';
+  }
+  for (let i = 0; i < text.length; i++) {
+    result += char;
+  }
+  return result;
+}
+
+console.log(contamination('abc', 'z'));
+
+
+console.clear();
+
+
+function sayHello(name) {
+  return 'Hello, ' + name;
+}
+console.log(sayHello('Mr. Spock'));
+
+console.clear();
