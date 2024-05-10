@@ -297,14 +297,52 @@ function enough(cap, on, wait) {
   console.clear();
 
 
+  function findDifference(a, b) {
+    let sum1 = 1;
+    for (let i = 0; i < a.length; i++) {
+        sum1 = sum1 * a[i];
+    }
+    let sum2 = 1;
+    for (let i = 0; i < b.length; i++) {
+        sum2 = sum2 * b[i];
+    }
+  return Math.abs(sum1 - sum2);
 
-  function reverseWords(str){
-    let reverse = '';
-    for (let i = 0; i < str.length; i++);
-        reverse = reverse + str[i];
-    return reverse;
   }
 
-  console.log(reverseWords('Laba diena vakaras'));
+  console.log(findDifference([2, 2, 3], [5, 4, 1]));
 
+  // Math. abs() 
+
+
+  console.clear();
+
+
+
+  function bmi(weight, height) {
+  let bmi = 0;
+  bmi = weight/height**2;
+  if (bmi <= 18.5) {
+    return 'Underweight';
+  }
+  if (bmi <= 25.0) {
+    return 'Normal';
+  }
+  if (bmi <= 30.0) {
+    return 'Overweight';
+  }
+  if (bmi > 30) {
+    return 'Obese';
+  }
+
+
+  }
+
+  console.log(bmi(88, 175));
+
+
+  console.clear();
+
+
+  
 
