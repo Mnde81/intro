@@ -9,6 +9,32 @@ Boolean logikos operatoriai:
 - && (and)    // turi tenkinti visas salygas true
 - || (or)    // (arba) turi tenkinti bent viena salyga true
 - !  (not)  // daugiau nei 2 sauktukai nerasyti
+
+Kaip interpretuojame kiti duomenu tipai ir ju reiksme, jei jos yra naudojamos lyg boolean'ai?
+
+String:
+jei tuscias - false
+jei ne tuscias - true
+
+Number:
+jei nulis - false
+jei ne nulis - true
+Jei NaN - false
+jei Infinity - true
+jei -Infinity - true
+
+Array
+jei tuscias - true
+jei ne tuscias - true
+
+Object:
+jei tuscias - true
+jei ne tuscias - true
+
+Undefined - false
+null - false
+
+
 */
 
 const username = 'Jonas';
@@ -65,6 +91,7 @@ console.log(!!false);  // daugiau nei 2 sauktukai - nerasyti
 
 
 console.log('---------------');
+
 
 
 
