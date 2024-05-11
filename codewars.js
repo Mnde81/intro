@@ -469,3 +469,156 @@ function sayHello(name) {
 console.log(sayHello('Mr. Spock'));
 
 console.clear();
+
+
+function greet(name){
+  
+  if(name === "Johnny") {
+    return "Hello, my love!";
+  } else {
+    return "Hello, " + name + "!";
+  }
+  
+
+}
+console.log(greet('Johnny'));
+
+
+console.clear();
+
+
+function solution(a, b){
+  let answer = '';  
+  if (a.length < b.length) {
+    return a + b + a;
+
+  } else {
+    return b + a + b;
+  }
+}
+console.log(solution('1', '22'));
+
+
+
+console.clear();
+
+
+
+function paperwork(n, m) {
+  let answer = 0;
+  if (n < 0) {
+    return 0;
+  } else if (m < 0 ) {
+    return 0;
+  } else {
+    answer = n * m;
+  }
+  return answer;
+}
+console.log(paperwork(5, 5));
+
+
+
+console.clear();
+
+
+function peopleWithAgeDrink(old) {
+  if (old < 14){
+    return 'drink toddy';
+  } else if (old < 18){
+    return 'drink coke';
+  } else if (old < 21) {
+    return 'drink beer';
+  } else if (old >= 21) {
+    return 'drink whisky';
+  }
+  
+}
+console.log(peopleWithAgeDrink(12));
+
+
+
+console.clear();
+
+
+
+function booleanToString(b){
+  let answer = '';
+  answer = answer + b;
+  return answer;
+}
+console.log(booleanToString(true));
+
+
+console.clear();
+
+
+function updateLight(current) {
+  if (current === 'green') {
+    return 'yellow';
+  } else if (current === 'yellow') {
+    return 'red';
+  } else if (current === 'red') {
+    return 'green';
+  }
+  }
+
+
+console.log(updateLight('green'));
+
+
+console.clear();
+
+
+
+function checkForFactor (base, factor) {
+  if (base % factor === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(checkForFactor(7, 2));
+
+
+console.clear();
+
+
+function getAverage(marks){
+  let sum = 0;
+  for (let i = 0; i < marks.length; i++) {
+    sum = sum + marks[i];
+  }
+  return Math.floor(sum / marks.length);
+}
+console.log(getAverage([5, 6, 7]));
+
+
+
+console.clear();
+
+
+
+function grow(x){
+  let answer = 1;
+  for (let i = 0; i < x.length; i++) {
+    answer = answer * x[i];
+  }
+  return answer;
+}
+
+console.log(grow([1, 2 ,3 ,4]));
+
+
+console.clear();
+
+
+function square(x) {
+return x ** 2;
+}
+console.log(square(4));
+
+
+console.clear();
+
+
