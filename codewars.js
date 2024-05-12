@@ -622,3 +622,103 @@ console.log(square(4));
 console.clear();
 
 
+function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  let sum = 0;
+  sum = laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+
+  return sum;
+}
+
+console.log(goals(5, 10, 2));
+
+
+console.clear();
+
+
+function createArray(number){
+  let newArray = [];
+  
+  for(let counter = 1; counter <= number; counter++){
+    newArray.push(counter);
+  }
+  
+  return newArray;
+}
+console.log(createArray(8));
+
+
+console.clear();
+
+
+
+// const solve = (x, y) => x // y
+
+function solve(x, y) {
+  let answer = 0;
+  answer = x / y;
+  return answer;
+}
+console.log(solve(5, 2));
+
+
+console.clear();
+
+
+
+function weatherInfo(temp) {
+  let celsius =0;
+  celsius = (temp - 32) * (5/9);
+  if (celsius < 0) {
+    return (celsius + " is freezing temperature")
+  } else {
+    return (celsius + " is above freezing temperature")
+  }
+    
+}
+console.log(weatherInfo(50));
+
+function convertToCelsius(temperature) {
+  let celsius = 0;
+  celsius = (temperature - 32) * (5/9);
+  return celsius;
+}
+
+console.log(convertToCelsius(50));
+
+
+console.clear();
+
+
+
+function myFirstKata(a, b) {
+  if (typeof a !== 'number') {
+    return false;
+  } else if (typeof b !== 'number') {
+    return false;
+  } else {
+    return (a % b) + (b % a);
+  }
+}
+
+console.log(myFirstKata(10, 15));
+
+console.clear();
+
+
+
+function rainAmount(mm){
+  let givewater = 0;
+  if (mm < 40) {
+       return "You need to give your plant " + (40 - mm) + "mm of water"
+  } else if (mm => 40) {
+       return "Your plant has had more than enough water for today!"
+  };
+}
+
+console.log(rainAmount(39));
+
+console.clear();
+
+
+
+  
