@@ -721,4 +721,87 @@ console.clear();
 
 
 
+function countSheep(num) {
+  let numcount = 1;
+  let answer = '';
+  for (let i = 0; i < num; i++) {
+    answer += numcount + ' sheep...';
+    numcount++;
+  }
+  return answer;
+}
+console.log(countSheep(3));
+
+
+console.clear();
+
+
+function cubeChecker(volume, side){
+  let lengt = 0;
+
+  if (volume <= 0) {
+    return false;
+  } else if (side <= 0) {
+    return false;
+  } else if (volume / side / side ===  side) {
+    return true;
+  } else {
+    return false;
+  }
+
+  
+};
+console.log(cubeChecker(8, 2));
+
+
+console.clear();
+
+
+function sixToast(num) {
+  let six = 0;
+  if (num < 6) {
+    six = 6 - num;
+  } else if (num > 6) {
+    six = num - 6;
+  }
+  return six;
+}
+
+console.log(sixToast(5));
+console.log(sixToast(12));
+
+
+console.clear();
+
+
+function chromosomeCheck(sperm) {
+  if (sperm === 'X') {
+    return 'Congratulations! You\'re going to have a daughter.'
+  } 
+  if (sperm === 'Y') {
+    return 'Congratulations! You\'re going to have a son.'
+  }
+}
+console.log(chromosomeCheck('X'));
+console.log(chromosomeCheck('Y'));
+
+
+console.clear();
+
+function ifChuckSaysSo(){
+    return 2 > 4;
+}
+
+
+console.clear();
+
+
+function main(verb, noun) {
+  return verb + noun;
+}
+
+console.clear();
+
+
+
   
