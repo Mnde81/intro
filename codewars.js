@@ -1050,3 +1050,76 @@ console.log(pillars(3, 10, 10));
 console.clear();
 
 
+function areYouPlayingBanjo(name) {
+  if (name.startsWith('R') || name.startsWith('r')) {
+    return name + ' plays banjo';
+  } else {
+    return name + ' does not play banjo';
+  }
+  
+}
+console.log(areYouPlayingBanjo('rick'));
+
+console.clear();
+
+
+function basicOp(operation, value1, value2){
+  answer = eval(value1 + operation + value2);
+  return answer;
+}
+console.log(basicOp('+', 4, 7));
+
+console.clear();
+
+
+function abbrevName(name){
+let firstWord = '';
+let secondWord = '';
+let answer = '';
+let word1 = name.split(' ');
+firstWord = word1[0];
+secondWord = word1[1];
+console.log(firstWord);
+console.log(secondWord);
+
+answer = firstWord[0] + '.' + secondWord[0];
+answer = answer.toUpperCase();
+return answer;
+
+
+}
+console.log(abbrevName('patrick feeney'));
+
+
+console.clear();
+
+
+function noBoringZeros(n) {
+  let numbers = n.toString();
+  for (let i = -1; i < numbers.length; i++) {
+    if (numbers.endsWith('0')) {
+      numbers = numbers.slice(0, numbers.length - 1);
+    }
+  }
+  numbers = parseInt(numbers);
+  return numbers;
+}
+console.log(noBoringZeros(9600000));
+
+
+console.clear();
+
+
+function removeChar(str){
+  let answer = '';
+  answer = str.slice(1, str.length-1);
+
+  return answer;
+ 
+ };
+ console.log(removeChar('Labas'));
+
+ console.clear();
+
+
+ 
