@@ -1122,4 +1122,32 @@ function removeChar(str){
  console.clear();
 
 
- 
+
+ function unusualFive() {
+  let five = 'Five!';
+  return five.length;
+  }
+
+
+  console.clear();
+
+
+  function multiply(number){
+    let ans = number.toString();
+    let answer = 0;
+  if (number >= 0) {
+    answer = number * (5 **ans.length);
+  } else if (number <0) {
+    answer = number * (5 ** (ans.length-1));
+  }
+    
+
+    return answer;
+  }
+  console.log(multiply(-3));
+
+  console.clear();
+
+
+  
+
