@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "method:string": "node --watch ./js/metodai/string.js",
     "method:number": "node --watch ./js/metodai/number.js",
     "codewars": "node --watch ./codewars.js",
     "typeof": "node --watch ./js/duomenys/typeof.js",

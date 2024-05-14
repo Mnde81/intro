@@ -804,4 +804,249 @@ console.clear();
 
 
 
-  
+function _if(bool, func1, func2) {
+ 
+  if (bool > 2) {
+    return funkcija1(func1);
+  } else {
+    return funkcija2(func2);
+  }
+
+  function funkcija1() {
+    return 'Labas'
+  }
+
+  function funkcija2() {
+    return 'Sveikas'
+  }
+}
+console.log (_if(1, 1, 11));
+
+
+console.clear();
+
+function removeEveryOther(arr){
+  let answer = '';
+  let answerlast = '';
+  for (let i = 0; i < arr.length; i= i+2) {
+    answer = answer + arr[i] + ', ';
+  }
+  answerlast = '[' + answer + ']';
+  return answerlast;
+}
+
+console.log(removeEveryOther(['Keep', 'Remove', 'Keep', 'Remove', 'Keep']));
+
+
+console.clear();
+
+let a = (123).toString();
+
+console.log(a);
+
+
+console.clear();
+
+function betterThanAverage(classPoints, yourPoints) {
+  let sumclass = 0;
+  for (let i = 0; i < classPoints.length; i++) {
+    sumclass += classPoints[i];
+  }
+  let sumyour = 0;
+  for (let i = 0; i < yourPoints.length; i++) {
+    sumyour += yourPoints[i];
+}
+return answer = (sumyour / yourPoints.length) > (sumclass / classPoints.length);
+
+}
+
+console.clear();
+
+
+function solution(str){
+
+  let answer = '';
+  for (let i = 0; i < str.length; i++) {
+    answer += str[str.length - 1 -i];
+  }
+  return answer;
+}
+
+console.log(solution('world'));
+
+// colors[colors.length - 1 - i]);
+
+console.clear();
+
+function sumMix(x){
+  let answer = 0;
+  for (let i = 0; i < x.length; i++) {
+  answer += parseInt(x[i]);
+  }
+return answer;
+}
+
+console.clear();
+
+
+function finalGrade (exam, projects) {
+  if (exam > 90 || projects > 10) {
+    return 100;
+  } else if (exam > 75 && projects >= 5) {
+    return 90;
+  } else if (exam > 50 && projects >= 2) {
+    return 75;
+  } else {
+    return 0;
+  }
+
+}
+console.log(finalGrade(100, 12));
+
+console.clear();
+
+
+function checkAlive(health) {
+  if (health <= 0) {    
+    return false;
+  } else {
+    return true;
+  }
+}
+
+console.clear();
+
+
+function position(letter){
+ 
+    if (letter === 'a') {
+      return 'Position of alphabet: 1';
+    } else if (letter === 'b') {
+      return 'Position of alphabet: 2';
+    } else if (letter === 'c') {
+      return 'Position of alphabet: 3';
+    } else if (letter === 'd') {
+      return 'Position of alphabet: 4';
+    } else if (letter === 'e') {
+      return 'Position of alphabet: 5';
+    } else if (letter === 'f') {
+      return 'Position of alphabet: 6';
+    } else if (letter === 'g') {
+      return 'Position of alphabet: 7';
+    } else if (letter === 'h') {
+      return 'Position of alphabet: 8';
+    } else if (letter === 'i') {
+      return 'Position of alphabet: 9';
+    } else if (letter === 'j') {
+      return 'Position of alphabet: 10';
+    } else if (letter === 'k') {
+      return 'Position of alphabet: 11';
+    } else if (letter === 'l') {
+      return 'Position of alphabet: 12';
+    } else if (letter === 'm') {
+      return 'Position of alphabet: 13';
+    } else if (letter === 'n') {
+      return 'Position of alphabet: 14';
+    } else if (letter === 'o') {
+      return 'Position of alphabet: 15';
+    } else if (letter === 'p') {
+      return 'Position of alphabet: 16';
+    } else if (letter === 'q') {
+      return 'Position of alphabet: 17';
+    } else if (letter === 'r') {
+      return 'Position of alphabet: 18';
+    } else if (letter === 's') {
+      return 'Position of alphabet: 19';
+    } else if (letter === 't') {
+      return 'Position of alphabet: 20';
+    } else if (letter === 'u') {
+      return 'Position of alphabet: 21';
+    } else if (letter === 'v') {
+      return 'Position of alphabet: 22';
+    } else if (letter === 'w') {
+      return 'Position of alphabet: 23';
+    } else if (letter === 'x') {
+      return 'Position of alphabet: 24';
+    } else if (letter === 'y') {
+      return 'Position of alphabet: 25';
+    } else if (letter === 'z') {
+      return 'Position of alphabet: 26';
+    }
+}
+console.log(position('b'));
+  // abcdefghijklmnopqrstuvwxyz
+
+
+  console.clear();
+
+
+  function findNeedle(haystack) {
+    let pos = 0;
+    for (let i = 0; i < haystack.length; i++)
+      
+      if (haystack[i] === 'needle') {
+        return 'found the needle at position ' + pos;
+      } else {
+        pos = pos +1;
+      }
+  }
+console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
+
+console.clear();
+
+function smash(words) {
+  let answer = '';
+  for (let i = 0; i < words.length; i++) {
+    answer += words[i] + ' ';
+  }
+  answer = answer.slice(0, answer.length-1);
+  return answer;
+};
+console.log(smash(['hello', 'world', 'this', 'is', 'great']));
+
+
+console.clear();
+
+
+function setAlarm(employed, vacation){
+  if (employed === true && vacation === true) {
+    return false;
+  } else if (employed === true && vacation === false) {
+    return true;
+  } else if (employed === false && vacation === true) {
+    return false;
+  } else if (employed === false && vacation === false) {
+    return false;
+  } 
+}
+console.log(setAlarm(true, true));
+
+// employed | vacation 
+// true     | true     => false
+// true     | false    => true
+// false    | true     => false
+// false    | false    => false
+
+
+console.clear();
+
+
+function pillars(numPill, dist, width) {
+  let distance = 0;
+  if (numPill > 1) {
+    distance = (numPill - 1) * dist * 100 + (numPill - 2) * width;
+  } else {
+    distance = 0;
+  }
+  return distance;
+}
+console.log(pillars(3, 10, 10));
+
+// number of pillars (≥ 1);
+// distance between pillars (10 - 30 meters);
+// width of the pillar (10 - 50 centimeters).
+
+
+console.clear();
+
+
