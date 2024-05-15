@@ -129,3 +129,53 @@ console.log('25462548624862'.slice(2, 6));
 // console.log('fsg'.trim());
 // console.log('fsg'.trimEnd());
 // console.log('fsg'.trimStart());
+
+console.clear();
+console.log('-------------------');
+console.log('split()');
+
+const sakinys = 'Labas rytas, Lietuva!';
+const zodziai = sakinys.split(' ');
+console.log(zodziai);
+console.log(zodziai[0]);
+console.log(zodziai[1]);
+console.log(zodziai[2]);
+
+const dalys = 'asd'.split('asdd');
+console.log(dalys);
+
+// sakinys => tuscias / ne tuscias
+// split => tuscias / ne tuscias
+// split => (ne)buvo kur kirpti
+
+console.log('-------------------');
+console.log('toLowerCase() toUpperCase()');
+console.log('Pomidoras'.toLowerCase());
+console.log('Pomidoras'.toUpperCase());
+
+console.log('-------------------');
+console.log('trim()');
+console.log('"' + 'Pomidoras'.trim() + '"');
+console.log('"' + 'Labas rytas'.trim() + '"');
+console.log('"' + 'Labas rytas    '.trim() + '"');
+console.log('"' + '    Labas rytas'.trim() + '"');
+console.log('"' + '    Labas rytas    '.trim() + '"');
+console.log('"' + '    Labas     rytas    '.trim() + '"');
+
+const username = ' vardenis        '.trim();
+
+// console.log('fsg'.trimEnd());
+// console.log('fsg'.trimStart());
+
+console.clear();
+
+const text = 'Labas rytas, Lietuva! Kaip tu, mieloji, ten laikais?';
+
+// const dictionary = ['Labas', 'rytas', 'Lietuva'];
+
+const dictionary = text
+    .replaceAll(',', '')
+    .replaceAll('!', '')
+    .replaceAll('?', '')
+    .split(' ');
+console.log(dictionary);

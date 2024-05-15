@@ -1149,5 +1149,416 @@ function removeChar(str){
   console.clear();
 
 
-  
 
+
+
+
+
+
+
+
+
+
+
+
+  // Polish ABC
+
+
+  /*
+https://www.codewars.com/kata/57ab2d6072292dbf7c000039
+
+ą -> a,
+ć -> c,
+ę -> e,
+ł -> l,
+ń -> n,
+ó -> o,
+ś -> s,
+ź -> z,
+ż -> z
+*/
+
+// size: 812
+// function polish(string) {
+//     let result = '';
+
+//     for (let i = 0; i < string.length; i++) {
+//         const letter = string[i];
+
+//         if (letter === 'ą') {
+//             result += 'a';
+//         } else if (letter === 'ć') {
+//             result += 'c';
+//         } else if (letter === 'ę') {
+//             result += 'e';
+//         } else if (letter === 'ł') {
+//             result += 'l';
+//         } else if (letter === 'ń') {
+//             result += 'n';
+//         } else if (letter === 'ó') {
+//             result += 'o';
+//         } else if (letter === 'ś') {
+//             result += 's';
+//         } else if (letter === 'ź') {
+//             result += 'z';
+//         } else if (letter === 'ż') {
+//             result += 'z';
+//         } else {
+//             result += letter;
+//         }
+//     }
+
+//     return result;
+// } correctPolishLetters
+
+// size: 576
+function polish(string) {
+  const polishAbc = 'ąćęłńóśźż';
+  const normalAbc = 'acelnoszz';
+  let result = '';
+
+  for (let i = 0; i < string.length; i++) {
+      const letter = string[i];
+
+      let index = -1;
+      for (let j = 0; j < polishAbc.length; j++) {
+          const polishLetter = polishAbc[j];
+          if (polishLetter === letter) {
+              result += normalAbc[j];
+              index = j;
+          }
+      }
+
+      if (index === -1) {
+          result += letter;
+      }
+  }
+
+  return result;
+}
+
+console.log(polish('Ąłęsa'), '-->', 'Alesa');
+console.log(polish('Wałęsa'), '-->', 'Walesa');
+console.log(polish('Jędrzej Błądziński'), '-->', 'Jedrzej Bladzinski');
+console.log(polish('Lech Wałęsa'), '-->', 'Lech Walesa');
+console.log(polish('Maria Skłodowska-Curie'), '-->', 'Maria Sklodowska-Curie');
+
+
+console.clear();
+
+
+
+
+
+function getDrinkByProfession(param){
+  let profession = param.toLowerCase();
+  if (profession === "politician") {
+    return 'Your tax dollars'
+  } else if (profession === 'jabroni') {
+    return 'Patron Tequila';
+  } else if (profession === 'school counselor') {
+    return 'Anything with Alcohol';
+  } else if (profession === 'programmer') {
+    return 'Hipster Craft Beer';
+  } else if (profession === 'bike gang member') {
+    return 'Moonshine';
+  } else if (profession === 'rapper') {
+    return 'Cristal';
+  } else {
+    return 'Beer';
+  }
+
+
+return profession;
+}
+console.log(getDrinkByProfession('pOLitiCIaN'));
+
+
+console.clear();
+
+
+function reverseWords(str){
+  let reverse = str.split(' ');
+  // console.log(reverse);
+  let answer = '';
+  for (let i = 0; i < reverse.length; i++) {
+    answer = answer + reverse[reverse.length - 1 -i] + ' ';
+  }
+  answer = answer.trim();
+  return answer;
+}
+console.log(reverseWords('The greatest victory is that which requires no battle'));
+
+// colors[colors.length - 1 - i]);
+
+
+
+console.clear();
+
+
+function addLength(str) {
+  let answer = str.split(' ');
+  // console.log(answer);
+  let result = '';
+  for (let i = 0; i < answer.length; i++) {
+    result += answer[i] + ' ' + answer[i].length + '  ';
+  }
+  result = result.trim();
+  result = result.split('  ');
+  return result;
+  }
+
+  console.log(addLength('apple ban'));
+
+
+
+  console.clear();
+
+
+
+function getPlanetName(id){
+
+
+  
+  if (id === 1) {
+    return 'Mercury';
+  } else if (id === 2) {
+    return 'Venus';
+  } else if (id === 3) {
+    return 'Earth';
+  } else if (id === 4) {
+    return 'Mars';
+  } else if (id === 5) {
+    return 'Jupiter';
+  } else if (id === 6) {
+    return 'Saturn';
+  } else if (id === 7) {
+    return 'Uranus';
+  } else if (id === 8) {
+    return 'Neptune';
+  }
+  
+  
+}
+console.log(getPlanetName(3));
+
+
+
+
+console.clear();
+
+
+
+function otherAngle(a, b) {
+  let third = 180 - a -b;
+  return third;
+}
+console.log(otherAngle(30, 60));
+
+
+console.clear();
+
+
+
+function xor(a, b) {
+  if (a === false || b === false) {
+    return false;
+  } else if (a === true || b === false) {
+    return true;
+  } else if (a === false || b === true) {
+    return true;
+  } else if (a === true || b === true) {
+    return false;
+  }
+}
+console.log(xor(false, false));
+
+
+console.clear();
+
+
+function multipleOfIndex(array) {
+  
+  for (let i = 0; i < array.length; i++) {
+    let answer = 0;
+    if (array[i] % i !== 0) {
+      answer += answer + array[i];
+    }
+   
+  }
+  return answer;
+  
+}
+
+
+console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]));
+
+
+console.clear();
+
+
+
+function validateHello(greetings) {
+  let greet = greetings.toLowerCase();
+  console.log(greet);
+  if (greet.includes('hello')) {
+    return true;
+  } else if (greet.includes('ciao')) {
+    return true;
+  } else if (greet.includes('salut')) {
+    return true; 
+   } else if (greet.includes('hallo')) {
+      return true;    
+   } else if (greet.includes('hola')) {
+      return true;   
+      
+    } else if (greet.includes('ahoj')) {
+      return true; 
+    } else if (greet.includes('czesc')) {
+      return true; 
+    
+  
+  } else {
+    return false;
+  }
+}
+
+console.log(validateHello('Hello my friend'));
+
+
+// hello - english
+// ciao - italian
+// salut - french
+// hallo - german
+// hola - spanish
+// ahoj - czech republic
+// czesc - polish
+
+
+console.clear();
+
+
+function reverseList(list) {
+  let answer = '';
+  for (let i = 0; i < list.length; i++){
+    answer = answer + list[list.length - 1 -i] + ' ';
+  }
+  answer = answer.trim();
+  answer = answer.split(' ');
+  return answer;
+}
+console.log(reverseList([1, 2, 3, 4]));
+
+
+console.clear();
+
+
+
+function whatday(num) { 
+if (num < 1) {
+  return "Wrong, please enter a number between 1 and 7";
+} else if (num > 7) {
+  return "Wrong, please enter a number between 1 and 7";
+} else if (num === 1) {
+  return "Sunday";
+} else if (num === 2) {
+  return "Monday";
+} else if (num === 3) {
+  return "Tuesday";
+} else if (num === 4) {
+  return "Wednesday";
+} else if (num === 5) {
+  return "Thursday";
+} else if (num === 6) {
+  return "Friday";
+} else if (num === 7) {
+  return "Saturday";
+}
+
+
+
+}
+console.log(whatday(7));
+
+
+console.clear();
+
+
+function generateHashtag(str) {
+  let hash = str.split(' ');
+  let caps = '';
+  if (str === '') {
+    return false;
+  }
+    for (let i = 0; i < hash.length; i++) {
+      caps += hash[i].charAt(0).toUpperCase() + hash[i].slice(1);
+   }
+  if (caps === '') {
+    return false;
+  }
+  caps = '#' + caps;
+    if (caps.length > 140) {
+      return false;
+    }
+  return caps;
+}
+
+// console.log(generateHashtag('Hello there thanks for trying my Kata'));
+console.log(generateHashtag('#'));
+
+
+console.clear();
+
+function dutyFree(normPrice, discount, hol){
+  let discountsum = 0;
+  let bottles = 0;
+  discountsum = normPrice / 100 * discount;
+  bottles = parseInt(hol / discountsum);
+
+  return bottles;
+}
+console.log(dutyFree(24, 35, 3000))
+
+
+console.clear();
+
+
+
+function humanReadable(seconds) {
+  let minutes = 0;
+  let hours = 0;
+  minutes = parseInt(seconds / 60);
+  hours = parseInt(minutes / 60);
+  if (seconds < 60) {
+    return hours + '0:0' + minutes + ':' + seconds;
+  }
+  if (minutes < 60 && hours < 10) {
+    return '0' + hours + ':' + minutes
+  }
+  
+}
+
+console.log(humanReadable(59));
+
+console.clear();
+
+function sumStrings(a,b) { 
+  let num1 = parseInt(a);
+  let num2 = parseInt(b);
+  let sum = 0;
+  let answer = '';
+  if (a === '') {
+    return b;
+  } else if (b = '') {
+    return a;
+  } else {
+    sum = num1 + num2;
+    answer = sum.toString();
+
+  }
+  sum = num1 + num2;
+  answer = sum.toString();
+
+  return answer;
+}
+console.log(sumStrings('', '2'));
