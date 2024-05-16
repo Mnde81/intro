@@ -1296,6 +1296,13 @@ console.log(reverseWords('The greatest victory is that which requires no battle'
 console.clear();
 
 
+
+
+
+
+
+
+
 function addLength(str) {
   let answer = str.split(' ');
   // console.log(answer);
@@ -1313,6 +1320,20 @@ function addLength(str) {
 
 
   console.clear();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1562,3 +1583,50 @@ function sumStrings(a,b) {
   return answer;
 }
 console.log(sumStrings('', '2'));
+
+
+console.clear();
+
+
+
+
+function removeEveryOther(arr){
+  let answer = '';
+  let answerlast = '';
+  for (let i = 0; i < arr.length; i= i+2) {
+    answer = answer + arr[i] + ', ';
+  }
+  answer = answer.trim();
+  answer = answer.split(' ');
+  return answer;
+}
+console.log(removeEveryOther(["Keep", "Remove", "Keep", "Remove", "Keep"]));
+
+console.clear();
+
+
+function fixTheMeerkat(arr) {
+  let answer = '';
+  for (let i = 0; i < arr.length; i++) {
+      answer = answer + arr[arr.length - 1 - i] + '  ';
+  }
+  answer = answer.trim();
+  answer = answer.split('  ');
+  return answer;
+ }
+ console.log(fixTheMeerkat(['tail', 'body', 'head']));
+
+//  colors[colors.length - 1 - i]);
+
+
+console.clear();
+
+
+function solution(str){
+  let answer = '';
+  for (let i = 0; i < str.length; i +=2) {
+    answer += str.slice(0, 2) + '  ';
+  }
+   return answer;
+}
+console.log(solution('abcdef'));

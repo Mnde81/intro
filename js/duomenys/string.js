@@ -2,7 +2,7 @@
 
 STRING - tekstas, tekstiniu simboliu grandinele
 
-iniciavimas: ' (vienguba), " (dviguba)
+iniciavimas: ' (vienguba), " (dviguba), ` (backtick)
 
 
 
@@ -77,3 +77,48 @@ console.log(pinPapildyta, papildymas2);
 console.log(pinTurinys, pinigai);
 
 
+
+/*
+\r - return
+\n - new line
+\t - tab
+
+*/
+
+console.clear();
+const a = 7;
+const b = 5;
+const c = a + b;
+
+// 7 + 5 = 12
+const ats1 = a + ' + ' + b + ' = ' + c;
+console.log(ats1);
+
+const ats2 = a + " + " + b + " = " + c;
+console.log(ats2);
+
+const ats3 = `${a} + ${b} = ${c}`;
+console.log(ats3);
+
+
+const start = 0;
+const finish = 11;
+const step = 3;
+const answer = 4;
+
+const mini1 = 'Skaičių intervale tarp ' + start + ' ir ' + finish + ', besidalijančių be liekanos iš ' + step + ' yra ' + answer + ' vienetai.';
+
+console.log(mini1);
+
+const mini2 = `Skaičių intervale tarp ${start} ir ${finish}, besidalijančių be liekanos iš ${step} yra ${answer} vienetai.`;
+console.log(mini2);
+
+const gg = 'Good game!';
+const number = 'Number: ' + answer;
+
+console.log(mini1.length);
+console.log(mini1[0]);
+
+
+console.log('' + true);
+console.log(true.toString());
