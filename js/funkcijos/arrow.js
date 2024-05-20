@@ -28,19 +28,23 @@ console.log(`${n1} * ${n2} = ${multi(n1, n2)}`);
 // arrow function
 // jeigu, logikos bloke yra tik 1 procedura
 // tai galima nerasyti {return}
+
 const div = (a, b) => a / b;
 console.log(`${n1} / ${n2} = ${div(n1, n2)}`);
 
 // arrow function
 // jeigu, parametru bloke yra tik 1 parametras
 // tai galima nerasyti ()
+
 const square = n => n * n;
 console.log(`${n1} * ${n1} = ${square(n1)}`);
 console.log(`${n2} * ${n2} = ${square(n2)}`);
 
+
 const hi = name => `Hi, my name is ${name}!`;
 console.log(hi('Jonas'));
 console.log(hi('Maryte'));
+
 
 const abbr = (a, b) => a[0] + '.' + b[0] + '.';
 const abbr2 = (a, b) => `${a[0]}.${b[0]}.`;
@@ -60,5 +64,4 @@ console.log(vienas());
 
 const antras = () => 'ANTRAS';
 
-console.log(antras());
 console.log(antras());

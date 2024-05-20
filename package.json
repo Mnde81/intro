@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "math": "node --watch ./js/metodai/math.js",
+    "ternary": "node --watch ./js/palyginimas/ternary.js",
     "method:string": "node --watch ./js/metodai/string.js",
     "method:number": "node --watch ./js/metodai/number.js",
     "codewars": "node --watch ./codewars.js",
@@ -10,6 +12,7 @@
     "for": "node --watch ./js/ciklai/for.js",
     "array": "node --watch ./js/duomenys/array.js",
     "if": "node --watch ./js/palyginimas/if.js",
+    "arrow": "node --watch ./js/funkcijos/arrow.js",
     "function": "node --watch ./js/funkcijos/function.js",
     "boolean": "node --watch ./js/duomenys/boolean.js",
     "string": "node --watch ./js/duomenys/string.js",

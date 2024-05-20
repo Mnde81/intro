@@ -1630,3 +1630,327 @@ function solution(str){
    return answer;
 }
 console.log(solution('abcdef'));
+
+
+
+console.clear();
+
+
+// function multipleOfIndex(array) {
+//   let newArray = [];
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] % i === 0) {
+//       newArray.push(array[i]);
+//     }
+//   }
+//   return newArray;
+// }
+// console.log(multipleOfIndex([0, 2, 3, 6, 9]));
+
+
+
+// function someFunction(n){
+//   var newArray = new Array(n);
+//   for(var i=0; i < n.length; i++){
+//     newArray += n[i];
+//   }
+//   return newArray;
+// }
+
+// console.log(someFunction(0,5,4,5));
+
+
+function multipleOfIndex(array) {
+  let newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === 0) {
+      newArray.push(array[i]);
+    } else if (array[i] % i === 0) {
+      newArray.push(array[i]);
+    }
+  }
+  return newArray;
+}
+console.log(multipleOfIndex([0, 2, 3, 6, 9]));
+
+
+console.clear();
+
+
+function reverseList(list) {
+  const newArray = list.reverse();
+  
+  
+  return newArray;
+}
+
+console.log(reverseList([1, 2, 3, 4]));
+
+
+console.clear();
+
+
+
+function strToNumber(val) {
+  return parseFloat(val);
+  }
+  console.log(strToNumber('-7'));
+
+
+
+
+  console.clear();
+
+
+
+  function removeEveryOther(arr){
+    let newArray = [];
+    for (let i = 0; i < arr.length; i= i+2) {
+      newArray.push(arr[i]);
+    }
+    
+    return newArray;
+  }
+
+  console.clear();
+
+
+  function digitize(n) {
+    const arr = n.toString().split('');
+    const newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+      newArr.push(parseInt(arr[i]));
+    }
+    newArr.reverse();
+    return newArr;
+  }
+  console.log(digitize(35231));
+
+
+  console.clear();
+
+
+  const reverseSeq = n => {
+    const newArr = [];
+    for (let i = 1; i <= n; i ++) {
+      newArr.push(i)
+    }
+    newArr.reverse();
+    return newArr;
+  };
+  console.log(reverseSeq(5));
+
+
+  console.clear();
+
+
+  function monkeyCount(n) {
+    const newArr = [];
+    for (let i = 1; i <= n; i ++) {
+      newArr.push(i)
+    }
+    
+    return newArr;
+    }
+    console.log(monkeyCount(10));
+
+
+    console.clear();
+
+
+    function between(a, b) {
+    const newArr = [];
+    for (let i = a; i <= b; i ++) {
+      newArr.push(i)
+    }
+    
+    return newArr;
+
+    }
+    console.log(between(1, 4));
+
+
+    console.clear();
+
+
+    function findMultiples(integer, limit) {
+      const newArr = [];
+      for (let i = integer; i <= limit; i++)
+        if (i % integer === 0) {
+          newArr.push(i)
+        }
+        return newArr;
+    }
+console.log(findMultiples(2, 6));    
+
+
+console.clear();
+
+
+//----------------------------------------------------------------------------------------------------------------
+
+
+// unfinished
+// function drawStairs(n) {
+//   let stairs = '';
+//   for (let i = 0; i < n; i++) {
+//     stairs += 'I' + '\n' + ' ';
+//     stairs += '';
+//   }
+//   return stairs;
+// }
+// console.log(drawStairs(7));
+
+
+console.clear();
+
+
+
+function squareSum(numbers){
+  let sum = 0;
+    for (i = 0; i < numbers.length; i++){
+      sum += numbers[i] ** 2;
+    }
+    return sum;
+}
+console.log(squareSum([1, 2, 2]));
+
+// optimalus
+function squareSum(numbers){
+  return numbers.reduce(function(sum, n){
+    return (n*n) + sum;
+  }, 0)
+}
+
+
+console.clear();
+
+
+function arrayPlusArray(arr1, arr2) {
+    const joinedArr = arr1.concat(arr2);
+    const initialValue = 0;
+    const sumWithInitial = joinedArr.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue, );
+
+    return sumWithInitial;
+}
+console.log(arrayPlusArray([1, 2, 3], [4, 5, 6]));
+
+// optimalus
+function arrayPlusArray(arr1, arr2) {
+  return arr1.concat(arr2).reduce((acc, cur) => acc + cur);
+}
+
+
+console.clear();
+
+
+function sumStr(a,b) {
+  
+  if (a === '') {
+    a = 0;
+  }
+  if ( b === '') {
+    b = 0;
+  }
+  let anm = parseFloat(a);
+  let bnm = parseFloat(b);
+  let sum = anm + bnm;
+  return sum.toString();
+   
+
+}
+console.log(sumStr('', ''));
+
+//optimalus
+function sumStr(a,b) {
+  return String(Number(a)+Number(b));
+}
+
+
+console.clear();
+
+
+//nepraejo, virsijo laika 12s
+function oddCount(n){
+  let sum = 0;
+  for (let i = 1; i < n; i++) {
+    if (i % 2 !== 0) {
+      sum++;
+    }
+  }
+  return sum;
+}
+console.log(oddCount(15));
+//-------------------------------
+const sum = n/2;
+
+parseInt(sum);
+
+https://www.codewars.com/kata/59342039eb450e39970000a6/train/javascript
+//-----------------------------------------------
+
+
+
+
+console.clear();
+
+
+function well(x){
+let goodsum = 0;
+for (let i = 0; i < x.length; i++) {
+  if (x[i] === 'good') {
+    goodsum++;
+  }
+}
+  if (goodsum === 0) {
+    return 'Fail!'
+  } else if (goodsum <= 2) {
+    return 'Publish!'
+  } else if (goodsum > 2) {
+    return 'I smell a series!'
+  }
+  
+  
+}
+
+console.log(well(['good', 'bad', 'good']));
+
+//optimalus
+// const well = x => {
+//   const good_count = x.filter(x => x == 'good').length;
+//   return good_count < 1 ? 'Fail!' : 
+//          good_count < 3 ? 'Publish!' : 'I smell a series!';
+// }
+
+
+console.clear();
+
+
+
+// Sum Numbers
+function sum(numbers) {
+  let suma = 0;
+  if (numbers === '[]') {
+    return 0;
+  } else {
+    
+    for (let i = 0; i < numbers.length; i++) {
+      suma += numbers[i];
+    }
+  }
+  
+  return suma;
+
+};
+
+console.log(sum([1, 5.2, 4, 0, -1]));
+
+//optimalus
+function sum(numbers) {
+  return numbers.reduce((a, b) => a + b, 0);
+}
+
+console.clear();
+
+
+
