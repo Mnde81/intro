@@ -1882,12 +1882,12 @@ function oddCount(n){
 }
 console.log(oddCount(15));
 //-------------------------------
-const sum = n/2;
+// const sum = n/2;
 
-parseInt(sum);
+// parseInt(sum);
 
-https://www.codewars.com/kata/59342039eb450e39970000a6/train/javascript
-//-----------------------------------------------
+// https://www.codewars.com/kata/59342039eb450e39970000a6/train/javascript
+// //-----------------------------------------------
 
 
 
@@ -1927,30 +1927,98 @@ console.clear();
 
 
 
-// Sum Numbers
-function sum(numbers) {
-  let suma = 0;
-  if (numbers === '[]') {
-    return 0;
-  } else {
+// // Sum Numbers
+// function sum(numbers) {
+//   let suma = 0;
+//   if (numbers === '[]') {
+//     return 0;
+//   } else {
     
-    for (let i = 0; i < numbers.length; i++) {
-      suma += numbers[i];
-    }
-  }
+//     for (let i = 0; i < numbers.length; i++) {
+//       suma += numbers[i];
+//     }
+//   }
   
-  return suma;
+//   return suma;
 
-};
+// };
 
-console.log(sum([1, 5.2, 4, 0, -1]));
+// console.log(sum([1, 5.2, 4, 0, -1]));
 
 //optimalus
-function sum(numbers) {
-  return numbers.reduce((a, b) => a + b, 0);
-}
+// function sum(numbers) {
+//   return numbers.reduce((a, b) => a + b, 0);
+// }
 
 console.clear();
 
+
+function cockroachSpeed(s) {
+  let speed = s * 100000 / 3600;
+
+  return Math.floor(speed);
+}
+console.log(cockroachSpeed(1.08));
+
+//optimalus
+// const cockroachSpeed = s => Math.floor(s / 0.036);
+
+console.clear();
+
+
+function evenOrOdd(number) {
+  if (number % 2 === 0) {
+    return 'Even';
+  } else {
+    return 'Odd';
+  }
+}
+console.log(evenOrOdd(9));
+
+// optimalus
+// function evenOrOdd(number) {
+//   return number % 2 === 0 ? 'Even' : 'Odd';
+// }
+
+console.clear();
+
+
+function removeExclamationMarks(s) {
+   
+   const str = s.replaceAll('!', '');
+  return str;
+}
+console.log(removeExclamationMarks('Labas! rytas!'));
+
+// optimalus
+// function removeExclamationMarks(s) {
+//   return s.replace(/!/gi, '');
+// }
+
+
+console.clear();
+
+
+function invert(array) {
+  for (let i = 0; i < array.length; i++) {
+    array[i] = array[i] * (-1);
+  }
+  return array ;
+}
+console.log(invert([1,2,3,4,5]));
+
+
+// optimalus
+// const invert = array => array.map(num => -num);
+
+console.clear();
+
+
+function numberToString(num) {
+  return num.toString();
+}
+console.log(numberToString(9));
+
+console.clear();
 
 

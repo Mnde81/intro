@@ -94,7 +94,6 @@ console.log(Math.fround(-0.1));
 
 console.log('-----hypot-----------');
 console.log(Math.hypot(3, 4));
-console.log(Math.sqrt(3 ** 2 + 4 ** 2));
 console.log(Math.hypot(1, 1, 1, 1));
 
 
@@ -130,4 +129,28 @@ console.log(Math.random());
 console.log(Math.random());
 console.log(Math.random());
 console.log(Math.random());
-console.log(0.9999999999999999);
+console.log(0.999999999);
+
+
+//-----------------------------------------
+
+console.log('------sign----------');
+console.log(Math.sign(5));
+console.log(Math.sign(-5));
+console.log(Math.sign(-3.14));
+console.log(Math.sign(2.71));
+console.log(Math.sign(0));
+console.log(Math.sign(-0));
+console.log(Math.sign(-Infinity));
+console.log(Math.sign(Infinity));
+console.log(Math.sign(NaN));
+
+
+console.log('------sqrt----------');
+console.log(Math.sqrt(4));
+console.log(Math.sqrt(9));
+console.log(Math.sqrt(-4), '2i');
+console.log(Math.sqrt(-9), '3i');
+// i*i = -1
+
+
