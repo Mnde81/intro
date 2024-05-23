@@ -2169,3 +2169,38 @@ console.clear();
 
 
 
+function powersOfTwo(n){
+  let newArr = [];
+  for (let i = 0; i <= n; i++){
+    newArr.push(2 ** i);
+
+  }
+  return newArr;
+}
+console.log(powersOfTwo(2));
+
+// optimalus
+// function powersOfTwo(n){
+//   var result = [];
+//   for (var i = 0; i <= n; i++) {
+//     result.push(Math.pow(2, i));
+//   }
+//   return result;
+// }
+
+console.clear();
+
+
+function replace(s){
+  let answer = '';
+   answer = s.replace(/[aeiouAEIOU]/gi, '!');
+  
+  return answer;
+}
+console.log(replace('Hi !'));
+
+console.clear();
+
+
+
+
