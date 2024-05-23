@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "spread": "node --watch ./js/metodai/spread.js",
     "object": "node --watch ./js/duomenys/object.js",
     "random": "node --watch ./js/metodai/random.js",
     "math": "node --watch ./js/metodai/math.js",

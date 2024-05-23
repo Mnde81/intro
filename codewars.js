@@ -1063,13 +1063,13 @@ console.log(areYouPlayingBanjo('rick'));
 console.clear();
 
 
-function basicOp(operation, value1, value2){
-  answer = eval(value1 + operation + value2);
-  return answer;
-}
-console.log(basicOp('+', 4, 7));
+// function basicOp(operation, value1, value2){
+//   answer = (value1 + operation + value2);
+//   return answer;
+// }
+// console.log(basicOp('+', 4, 7));
 
-console.clear();
+// console.clear();
 
 
 function abbrevName(name){
@@ -2020,5 +2020,152 @@ function numberToString(num) {
 console.log(numberToString(9));
 
 console.clear();
+
+
+function combineNames(firstName, lastName) {
+
+  return `${firstName} ${lastName}`;
+}
+console.log(combineNames('James', 'Stevens'));
+
+// optimalus
+// const combineNames = (...names) => names.join(' ');
+
+console.clear();
+
+
+const stringToNumber = function(str){
+  
+  return parseInt(str);
+}
+console.log(stringToNumber('1234'));
+
+console.clear();
+
+
+
+function howMuchILoveYou(nbPetals) {
+  const petalsround = nbPetals - 6 * Math.trunc(nbPetals / 6);
+  
+  if (petalsround % 6 === 0) {
+    return "not at all";
+  }
+  if (petalsround === 1) {
+    return "I love you";
+  }
+  if (petalsround === 2) {
+    return "a little";
+  }
+  if (petalsround === 3) {
+    return "a lot";
+  }
+  if (petalsround === 4) {
+    return "passionately";
+  }
+  if (petalsround === 5) {
+    return "madly";
+  }
+}
+
+console.log(howMuchILoveYou(8));
+
+// optimalus
+// function howMuchILoveYou(nbPetals) {
+//   let phrase = {    
+//     0: "not at all",
+//     1: "I love you",
+//     2: "a little",
+//     3: "a lot",
+//     4: "passionately",
+//     5: "madly"
+//   }
+//   return phrase[nbPetals%6]
+// }
+
+console.clear();
+
+
+
+function maps(x){
+
+  const array1 = x.map((x) => x * 2);
+  return array1;
+}
+console.log(maps([1, 4, 9, 16]));
+
+// optimalus
+// function maps(x){
+//   return x.map(n => n * 2);
+// }
+
+console.clear();
+
+
+function repeatStr (n, s) {
+  strAnswer = '';
+  for (let i = 0; i < n; i++)
+    strAnswer += s;
+  return strAnswer;
+}
+console.log(repeatStr(5, 'Hello'));
+
+// optimalus
+// function repeatStr (n, s) {
+//   return s.repeat(n);
+// }
+
+console.clear();
+
+
+function divisibleBy(numbers, divisor){
+  let newArr = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % divisor === 0) {
+      newArr.push(numbers[i]);
+    }
+  }
+  return newArr;
+}
+console.log(divisibleBy([1, 2, 3, 4, 5, 6], 2));
+
+// optimalus
+// function divisibleBy(numbers, divisor) {
+//   return numbers.filter(n => n % divisor === 0)
+// }
+
+console.clear();
+
+
+function makeNegative(num) {
+  if (num === 0) {
+    return 0;
+  }
+  if (num < 0) {
+    return num;
+  } else {
+    return num * (-1);
+  }
+}
+console.log(makeNegative(1));
+
+// optimalus
+// function makeNegative(num) {
+//   return -Math.abs(num);
+// }
+
+console.clear();
+
+
+function converter (mpg) {
+  const ltrPerGallon = 4.54609188;
+  const kmPerMile = 1.609344;
+  const conv = kmPerMile / ltrPerGallon;
+  let answer = mpg * conv;
+  return parseFloat(answer.toFixed(2));
+}
+console.log(converter(10));
+
+console.clear();
+
 
 
