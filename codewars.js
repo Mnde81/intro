@@ -2202,5 +2202,15 @@ console.log(replace('Hi !'));
 console.clear();
 
 
+function findSmallestInt(arr) {
+  let smallest = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (smallest < arr[i]) {
+      smallest = arr[i];
+    }
 
+  }
+  return smallest;
+}
+console.log(findSmallestInt([34, 15, 88, 2]));
 
