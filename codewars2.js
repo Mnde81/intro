@@ -231,4 +231,88 @@ function formatMoney(amount){
 
     console.clear();
 
-    
+    function howManyDalmations(number) {
+  
+        var dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIONS!!!"];
+        
+        if (number <= 10) {
+            return dogs[0];
+        };
+         if (number <= 50) {
+            return dogs[2];
+        };
+        if (number === 101) {
+            return dogs[3];
+         } else {
+            return dogs[0];
+         };
+        };
+
+        console.clear();
+
+
+        function fuelPrice(litres, pricePerLitre) {
+            if (litres < 2) {
+                return parseFloat((litres * pricePerLitre).toFixed(2));
+            } else if (litres >= 2 && litres < 4) {
+                return parseFloat((litres * (pricePerLitre - 0.05)).toFixed(2));
+            } else if (litres >= 4 && litres < 6) {
+                return parseFloat((litres * (pricePerLitre - 0.1)).toFixed(2));
+            } else if (litres >= 6 && litres < 8) {
+                return parseFloat((litres * (pricePerLitre - 0.15)).toFixed(2));
+            } else if (litres >= 8 && litres < 10) {
+                return parseFloat((litres * (pricePerLitre - 0.2)).toFixed(2));
+            } else if (litres >= 10) {
+                return parseFloat((litres * (pricePerLitre - 0.25)).toFixed(2));
+            }
+          }
+          console.log(fuelPrice(3, 1.5));
+
+        //   optimalus
+        //   function fuelPrice(litres, pricePerLiter) {
+        //     for (var i = 2; i <= 10; i +=2) { //discount loop
+        //       if (litres >= i) {
+        //         pricePerLiter -= 0.05;
+        //       }
+        //     }
+        //     return Math.round(litres * pricePerLiter * 100) / 100;;
+        //   }
+        console.clear();
+
+        var quote = function(fighter) {
+            let person = fighter.toLowerCase();
+            if (person === 'conor mcgregor') {
+                return "I'd like to take this chance to apologize.. To absolutely NOBODY!";
+            };
+            if (person === 'george saint pierre') {
+                return "I am not impressed by your performance.";
+            }
+          };
+        
+          console.clear();
+
+          function getNumberFromString(s) {
+            let num = s.replace(' ','');
+            console.log(num);
+            num = num.match(/\d/g);
+            num = num.join("");
+            return parseFloat(num);
+          }
+          console.log(getNumberFromString("hell5o wor6ld"));
+
+    //  optimalus
+    //  function getNumberFromString(s) {
+    //     return +s.replace(/\D/g, "");
+    //   }
+
+    console.clear();
+
+    function generateRange(min, max, step){
+        let arr = [];
+        for (let i = min; i < max; i + step)
+            arr.push[i];
+
+    }
+    console.log(generateRange(1, 10, 1));
+
+          

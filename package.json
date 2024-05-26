@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "cw3": "node --watch ./js/pratimai/cw3.js",
     "method:array": "node --watch ./js/metodai/array.js",
     "des": "node --watch ./js/metodai/des.js",
     "spread": "node --watch ./js/metodai/spread.js",

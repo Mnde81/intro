@@ -166,3 +166,6 @@ console.log(dalyba(false, 4));
 
 console.log(dalyba(-100, 20));
 console.log(dalyba(55, 4));
+
+// console.clear();
+
