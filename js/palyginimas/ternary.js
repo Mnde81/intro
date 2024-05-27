@@ -110,34 +110,4 @@ console.log(strAts2);
 
 //-----------
 
-const jonasMarks = [];
-const maryteMarks = [10, 2, 8, 4, 6];
-
-function emptyMarksArray () {
-    return 'Studentas neturi pazymiu';
-}
-
-function marksAverage(marks) {
-    let sum = 0;
-
-    for (let i = 0; i < marks.length; i++) {
-        sum += marks[i];
-    }
-    const count = marks.length;
-    const average = sum / count;
-    return average;
-}
-
-const jonasFunc = jonasMarks.length === 0 
-                ? emptyMarksArray
-                : marksAverage; 
-const jonasAverage = jonasFunc(jonasMarks);
-console.log(jonasAverage);
-
-
-const maryteFunc = maryteMarks.length === 0 
-                ? emptyMarksArray
-                : marksAverage; 
-const maryteAverage = maryteFunc(maryteMarks);
-console.log(maryteAverage);
 

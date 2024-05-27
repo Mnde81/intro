@@ -108,3 +108,22 @@ const sentence3 = `Valgysi: ${pavadinimas3}; Kiekis: ${kiekis3}`;
 console.log(sentence3);
 
 
+console.clear();
+
+function drinks(...list) {
+    return `Gerimu kiekis: ${list.length}.`
+
+}
+console.log(drinks('a', 'b', 'c'));
+
+
+function iLike(name, ...list) {
+    return `${name} megsta ${list.length} spalvas.`;
+
+}
+console.log(iLike('Jonas', 'red', 'blue'));
+
+
+const marks = [10, 2, 8, 4, 6];
+console.log(Math.max(...marks));
+console.log(Math.min(...marks));
