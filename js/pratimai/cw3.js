@@ -168,7 +168,77 @@ function hello(name) {
 console.clear();
 
 
+function mergeArrays(arr1, arr2) {
+  let merge = [];
+  merge = arr1.concat(arr2).sort();
+  merge = [...new Set(merge)];
+  merge = merge.sort((a, b) => a - b);
+    
+  return merge;
+}
+console.log(mergeArrays([1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12]));
 
+// optimalus
+// function mergeArrays(arr1, arr2) {
+//     return Array.from(new Set(arr1.concat(arr2).sort((a,b) => (a-b))));
+//   }
+
+
+console.clear();
+
+
+
+function mouthSize(animal) {
+    const an = animal.toLowerCase();
+    
+    const ans = an === 'alligator' ? 'small' : 'wide';
+
+    return ans;
+
+  }
+  console.log(mouthSize('AlliGator'));
+
+
+//   optimalus
+//   function mouthSize(animal) {
+//     return animal.toLowerCase() == 'alligator' ? 'small' : 'wide';
+//   }
+
+console.clear();
+
+
+function stringClean(s){
+    const noDigits = s.replace(/[0-9]/g, '');
+    return noDigits;
+
+  }
+  console.log(stringClean('This looks5 grea8t!'));
+
+//   optimalus
+//   function stringClean(s){
+//     return s.replace(/\d/g, "");
+//   }
+
+console.clear();
+
+
+//return price without vat
+function excludingVatPrice(price){
+    if (price === null) {
+        return -1;
+    } else {
+       return parseFloat((price / 1.15).toFixed(2)); 
+    }
+    
+  }
+  console.log(excludingVatPrice(230));
+
+
+//   optimalus
+//   excludingVatPrice = p => p === null ? -1 : +(p / 1.15).toFixed(2);
+
+
+console.clear();
 
 
 

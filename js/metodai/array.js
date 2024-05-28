@@ -128,3 +128,7 @@ console.log(demo);
 const reversed = demo.toReversed(); // nekeicia originalo
 console.log(reversed);
 console.log(demo);
+
+
+
+// [1, 2 ,3] -> [2, 4, 6]

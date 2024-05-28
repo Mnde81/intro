@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "array2": "node --watch ./js/metodai/array2.js",
     "for-other": "node --watch ./js/ciklai/for-other.js",
     "switch": "node --watch ./js/palyginimas/switch.js",
     "cw3": "node --watch ./js/pratimai/cw3.js",
