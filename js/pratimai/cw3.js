@@ -241,4 +241,181 @@ function excludingVatPrice(price){
 console.clear();
 
 
+function sumOfDifferences(arr) {
+  let answer = arr.sort((a, b) => b - a);
+  let sum = 0;
+  let j = 0;
+  for (let i = 0; i < answer.length - 1; i++) {
+    j = i + 1;
+    sum += (answer[i] - answer[j]);
+    
+  }
+   return sum;
+}
+console.log(sumOfDifferences([2, 1, 10]));
+
+
+// optimalus
+// function sumOfDifferences(arr) {
+//   return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
+// }
+
+console.clear();
+
+
+var findAverage = function (nums) {
+  let sum = 0;
+  let count = 0;
+  for (let i = 0; i < nums.length; i++) {
+    sum += nums[i];
+    count++;
+  }
+  return sum / count;
+}
+console.log(findAverage([1, 3, 5, 7]));
+
+
+// optimalus
+// const findAverage = nums => nums.reduce((a, b) => a + b) / nums.length;
+
+
+console.clear();
+
+function datingRange(age){
+  let min = Math.floor(age / 2 + 7);
+  let max = Math.floor((age - 7) * 2);
+  if (age > 14 && age <= 100) {
+    return `${min}-${max}`;
+  }
+  let min2 = Math.floor(age - 0.1 * age);
+  let max2 = Math.floor(age + 0.1 * age);
+
+  if (age <= 14) {
+    return `${min2}-${max2}`;
+  }
+  
+}
+console.log(datingRange(27));
+
+
+// optimalus
+// function datingRange(age){
+//   return `${min(age)}-${max(age)}`;
+  
+//   function min(age) {
+//     return Math.floor(age > 14 ? (age / 2) + 7 : age - 0.10 * age);
+//   }
+  
+//   function max(age) {
+//     return Math.floor(age > 14 ? (age - 7) * 2 : age + 0.10 * age);
+//   }
+// }
+
+
+console.clear();
+
+
+function lowercaseCount(str){
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] >= 'a' && str[i] <= 'z') {
+      count++
+    }
+  }
+  return count;
+}
+console.log(lowercaseCount("abcABC123"));
+
+// optimalus
+// function lowercaseCount(str){
+//   return (str.match(/[a-z]/g) || []).length
+// }
+
+
+console.clear();
+
+
+function arr2bin(arr){
+  let answer = '';
+  for (let i = 0; i < arr.length; i++) {
+    // if (arr === '[]') {
+    //   return '0';
+    // }
+    if (arr[i] === 'number') {
+      answer = answer + '1';
+    }
+  }
+  return answer;
+}
+console.log(arr2bin([1, 2]));
+
+
+console.clear();
+
+
+function isDivisible(n, x, y) {
+  if (n % x === 0 && n % y === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(isDivisible(12, 2, 6));
+
+// optimalus
+// function isDivisible(n, x, y) {
+//   return n % x === 0 && n % y === 0
+// }
+
+console.clear();
+
+
+function billboard(name, price = 30){
+  let answer = 0;
+  for (let i = 0; i < name.length; i++) {
+    answer += price;
+  }
+  return answer;
+} 
+console.log(billboard('Jeong-Ho Aristotelis'));
+
+
+console.clear();
+
+
+function distinct(a) {
+  let sorted = a.sort((a, b) => a - b);
+  let answer = [];
+  for (let i = 0; i < sorted.length; i++) {
+    if (sorted[i] === sorted[i+1]) {
+      continue;
+    } else {
+      answer.push(sorted[i]);
+    }
+  }
+
+  return answer;
+}
+console.log(distinct([1, 2, 1, 1, 3, 2]));
+
+
+console.clear();
+
+
+function isPalindrome(x) {
+  let xLo = x.toLowerCase();
+  let reversed = '';
+  for (let i = 0; i < xLo.length; i++)
+    reversed += xLo[xLo.length - 1 - i];
+  const answer = reversed === xLo ? true : false;
+  return answer;
+}
+console.log(isPalindrome('madan'));
+
+// optimalus
+// const isPalindrome = (x) => {
+//   return x.split("").reverse().join("").toLowerCase() === x.toLowerCase() ? true : false
+// }
+
+console.clear();
 
