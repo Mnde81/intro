@@ -419,3 +419,144 @@ console.log(isPalindrome('madan'));
 
 console.clear();
 
+
+function array(string) {
+  let arr = string.split(',');
+  if (arr.length < 3) {
+    return null;
+  }
+
+  const arrPop = arr.pop();
+  const arrShift = arr.shift();
+  
+
+  return arr.join(' ');
+
+
+}
+console.log(array("1,2"));
+
+// optimalus
+// function array(arr){
+//   return arr.split(",").slice(1,-1).join(" ") || null;
+// }
+
+console.clear();
+
+
+function stringToArray(string){
+
+	return string.split(' ');
+
+}
+console.log(stringToArray("I love arrays they are my favorite"));
+
+console.clear();
+
+function plural(n) {
+  let arr = n.split(' ');
+  console.log(arr);
+  let answer = parseFloat(arr[0]);
+  
+  return answer > 1;
+}
+console.log(plural('5 minutes'));
+
+console.clear();
+
+
+function shortcut(string) {
+  let answer = string.replaceAll('a', '').replaceAll('e', '').replaceAll('i', '').replaceAll('o', '').replaceAll('u', '');
+  return answer;
+}
+console.log(shortcut("goodbye"));
+
+// optimalus
+// function shortcut(string){
+//   return string.replace(/[aeiou]/g,'')
+// }
+
+console.clear();
+
+
+function boolToWord(bool){
+  let answer = bool === true ? 'Yes' : 'No';
+  return answer;
+}
+console.log(boolToWord(true));
+
+// optimalus
+// function boolToWord( bool ){
+//   return bool ? 'Yes':'No';
+// }
+
+console.clear();
+
+function find(array, element) {
+  if (array.includes(element)) {
+    return array.indexOf(element)
+  } else {
+    return "Not found";
+  }
+  
+}
+
+function find(array, element) {
+  return array.includes(element) ? array.indexOf(element) : "Not found";
+  
+}
+
+console.clear();
+
+function nameShuffler(str){
+  let arr = str.split(' ');
+  
+  return `${arr.at(-1)} ${arr[0]}`;
+}
+console.log(nameShuffler("john McClane"));
+
+// optimalus
+// function nameSuffle(str){
+//   return str.split(' ').reverse().join(' ')
+// }
+
+
+console.clear();
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  let answer = dadYearsOld - sonYearsOld * 2;
+  if (answer < 0) {
+    return answer * -1;
+  } else {
+    return answer;
+  }
+}
+
+// optimalus
+// function twiceAsOld(dadYearsOld, sonYearsOld) {
+//   return Math.abs(dadYearsOld - 2 * sonYearsOld);
+// }
+
+console.clear();
+
+function expressionMatter(a, b, c) {
+  const first = a * (b + c);
+  const second = a * b * c;
+  const third = a + b * c;
+  const fourth = (a + b) * c;
+  let string = `${first},${second},${third},${fourth}`;
+  let arr = string.split(',');
+  let high = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > high) {
+      high = arr[i];
+    }
+  }
+
+  console.log(high);
+
+}
+console.log(expressionMatter(1, 2, 3));
+
+console.clear();
+
