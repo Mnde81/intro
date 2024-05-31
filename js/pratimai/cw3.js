@@ -560,3 +560,272 @@ console.log(expressionMatter(1, 2, 3));
 
 console.clear();
 
+
+function noSpace(x){
+return x.split('').filter(e => e.trim().length).join('');
+}
+
+// optimalus
+// function noSpace(x){
+//   return x.replace(/\s/g, '');
+// }
+
+console.clear();
+
+function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  
+  const filtered = birds.filter(n => n !== geese[0])
+  .filter(n => n !== geese[1])
+  .filter(n => n !== geese[2])
+  .filter(n => n !== geese[3])
+  .filter(n => n !== geese[4]);
+ 
+  return filtered;
+ 
+};
+console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
+
+// optimalus
+// function gooseFilter (birds) {
+//   var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+//   return birds.filter(b => !geese.includes(b));
+// };
+
+console.clear();
+
+
+function howManyLightsabersDoYouOwn(name) {
+  const own = name === 'Zach' ? 18 : 0;
+  return own;
+}
+
+// optimalus
+// function howManyLightsabersDoYouOwn(name) {
+//   return name === 'Zach' ? 18 : 0;
+// }
+
+console.clear();
+
+function min(list) {
+  return Math.min(...list);
+}
+function max(list) {
+  return Math.max(...list);
+}
+
+
+console.log(min([4,6,2,1,9,63,-134,566]));
+
+
+// optimalus
+// const min = (list) => Math.min(...list);
+// const max = (list) => Math.max(...list);
+
+console.clear();
+
+
+function apple(x){
+  let answer = parseFloat(x);
+  let ans = answer * answer;
+  return ans > 1000 ? 'It\'s hotter than the sun!!' : 'Help yourself to a honeycomb Yorkie for the glovebox.';
+}
+
+// optimalus
+// function apple(x){
+//   return Math.pow(x, 2) > 1000 ? 'It\'s hotter than the sun!!' : 'Help yourself to a honeycomb Yorkie for the glovebox.' ;
+// }
+
+
+console.clear();
+
+function first(arr, n) {
+  if (n === 0) {
+    return [];
+  } else {
+    return arr = arr.slice(0, n);
+  }
+}
+console.log(first(['a', 'b', 'c', 'd', 'e'], 1));
+
+console.clear();
+
+
+function squareArea(A){
+  const r = 2 * A / Math.PI
+  let area = r * r;
+  area = parsFloat(area.toFixed(2));
+
+  return area;
+}
+
+// optimalus
+// function squareArea(A){
+//   var circum = 4 * A;
+//   var radius = circum / (2 * Math.PI);
+//   var area = Math.pow(radius, 2);
+//   return Math.round(area*100)/100
+// }
+
+console.clear();
+
+function check(a, x) {
+
+let ans = a.includes(x) ? true : false;
+
+};
+
+console.clear();
+
+function getGrade (s1, s2, s3) {
+  let aver = (s1 + s2 + s3) / 3;
+  if (aver >= 90 && aver <= 100) {
+    return 'A';
+  }
+  if (aver >= 80 && aver < 90) {
+    return 'B';
+  }
+  if (aver >= 70 && aver < 80) {
+    return 'C';
+  }
+  if (aver >= 60 && aver < 70) {
+    return 'D';
+  }
+  if (aver >= 0 && aver < 60) {
+    return 'F';
+  }
+
+
+}
+
+
+console.clear();
+
+function greet (name, owner) {
+  return answer = name === owner ? 'Hello boss' : 	'Hello guest';
+}
+
+
+console.clear();
+
+
+function odds(values){
+  // arrow it
+  return values.filter(n => n % 2 !==0 );
+}
+
+console.clear();
+
+function pointsPer48(ppg, mpg) {
+  let answer = ppg / mpg * 48;
+  if (ppg === 0 || mpg === 0) {
+    return 0;
+  } else {
+    return parseFloat(answer.toFixed(1));
+  }
+ 
+ 
+}
+
+// optimalus
+// function pointsPer48(ppg, mpg) {
+//   return +(ppg/mpg*48).toFixed(1)||0
+// }
+
+console.clear();
+
+function sakuraFall(v) {
+  let distance = 80 * 5;
+  if (v <= 0) {
+    return 0;
+  } else {
+    return distance / v;
+  }
+  
+  
+}
+
+console.clear();
+function power(x, y) {
+  let answer = x ** y;
+  if (x === 0 && y === 0) {
+    return 1;
+  } else {
+    return answer;
+  }
+};
+
+
+console.clear();
+
+function calculator(a, b, sign) {
+  if (sign !== '+' || sign !== '-' || sign !== '*' || sign !== '/') {
+    return "unknown value";
+  } else if (a !== 'number' || b !== 'number') {
+    return "unknown value";
+  }
+  if (sign === '+') {
+    return a + b;
+  }
+  if (sign === '-') {
+    return a - b;
+  }
+  if (sign === '*') {
+    return a * b;
+  }
+  if (sign === '/') {
+    return a / b;
+  }
+
+
+
+}
+console.clear();
+
+function grader(score) {
+  if (score > 1 || score < 0.6) {
+    return 'F';
+  }
+  if (score >= 0.9) {
+    return 'A';
+  }
+  if (score >= 0.8) {
+    return 'B';
+  }
+  if (score >= 0.7) {
+    return 'C';
+  }
+  if (score >= 0.6) {
+    return 'D';
+  }
+}
+
+console.clear();
+
+function reverse(string){
+  let answer = string.trim();
+  answer = answer.split(' ');
+  answer = answer.reverse();
+  answer = answer.join(' ');
+
+  return answer;
+}
+
+console.clear();
+
+
+function validateCode(code) {
+   let codeToString = code.toString();
+   if (codeToString[0] === '1' || codeToString[0] === '2' || codeToString[0] === '3') {
+    return true;
+   } else {
+    return false;
+   }
+  }
+
+// optimalus
+// function validateCode (code) {return /^[123]/.test(code)}
+
+console.clear();
+
+
