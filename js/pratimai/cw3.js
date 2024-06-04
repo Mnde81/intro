@@ -946,3 +946,166 @@ console.log(sumSquares([1,2,3,4,5]));
 
 console.clear();
 
+
+function warnTheSheep(queue) {
+  
+  if (queue.indexOf('wolf') === queue.length+1 ) {
+    return "Pls go away and stop eating my sheep";
+    console.log(queue.indexOf('wolf'));
+  }
+}
+console.log(warnTheSheep(['sheep', 'sheep', 'sheep', 'sheep', 'sheep', 'sheep', 'sheep', 'wolf']));
+
+
+console.clear();
+
+function divCon(x){
+  let sumInt = 0;
+  let sumStr = 0;
+  for (let i = 0; i < x.length; i++) {
+    if (x[i] === 'number') {
+      sumInt += x[i];
+    }
+    // if (x[i] === 'string') {
+    //   sumStr += parseFloat(x[i]);
+      
+    // }
+  }
+  return sumInt;
+}
+console.log(divCon(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']));
+
+
+console.clear();
+
+
+function withoutLast(arr) {
+  // Fix it
+  arr.pop(); // removes the last element
+  return arr;
+}
+console.log(withoutLast([ 17, 86, 55, 83, 65, 3, 34, 17, 65, 21, 61 ]));
+
+console.clear();
+
+function takeUmbrella(weather, chance) {
+  if (weather === 'rainy') {
+    return true;
+  }
+  if (weather === 'cloudy' && chance > 0.2) {
+    return true;
+  }
+  if (weather === 'sunny' && chance <= 0.2) {
+    return false;
+  }
+  if (weather === 'sunny' && chance > 0.2) {
+    return true;
+  }
+
+}
+console.log(takeUmbrella('sunny', 0.4));
+
+
+console.clear();
+
+
+function differenceOfSquares(n) {
+  let newArr = [];
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    newArr.push(i);
+  }
+  for (let i = 0; i < newArr.length; i ++) {
+    sum += newArr[i];
+  }
+  console.log(sum)
+  
+  newArr = newArr.map(n => n ** 2);
+  let sumOfSquares = 0;
+  for (let i = 0; i < newArr.length; i++ ) {
+    sumOfSquares += newArr[i];
+  }
+
+  console.log(sumOfSquares);
+  
+  return sum ** 2 - sumOfSquares;
+}
+console.log(differenceOfSquares(10));
+
+
+// optimalus
+// function differenceOfSquares(x){
+//   var sum = 0, squareSum = 0, i;
+//   for (i =1 ; i <= x; i++) {
+//     sum += i*i;
+//     squareSum += i;
+//   }
+//   return squareSum*squareSum - sum;
+// }
+
+console.clear();
+
+
+function cookingTime(neededPower, minutes, seconds, power) {
+  let sec = minutes * 60 + seconds;
+  let powerRatio = power / neededPower;
+  let ans = sec / powerRatio;
+  ans = Math.ceil(ans);
+  let min = Math.floor(ans / 60);
+  let ans2 = ans - min * 60
+  console.log(ans2);
+  return `${min} minutes ${ans2} seconds`;
+}
+console.log(cookingTime(800, 3, 0, 1200));
+
+
+console.clear();
+
+function isItLetter(c) {
+  return c.toLowerCase() != c.toUpperCase();
+}
+
+// optimalus
+// function isItLetter(character) {
+//   return /[a-z]/i.test(character);
+// }
+
+console.clear();
+
+
+function toNumberArray(stringarray){
+  let newArr = [];
+  for (let i = 0; i < stringarray.length; i++) {
+    newArr.push(parseFloat(stringarray[i]))
+  }
+  return newArr;
+}
+console.log(toNumberArray(["1", "2", "3"]));
+
+// optimalus
+// function toNumberArray(stringarray)
+// {
+//   return stringarray.map(parseFloat);
+// }
+
+console.clear();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
