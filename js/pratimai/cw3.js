@@ -829,3 +829,120 @@ function validateCode(code) {
 console.clear();
 
 
+function getAge(inputString){
+  return parseInt(inputString);
+  }
+
+  console.log(getAge("5 years old"));
+
+
+  console.clear();
+
+
+  function hoopCount(n) {
+   return ans = n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it";
+ }
+ console.log(hoopCount(11));
+
+
+ console.clear();
+
+
+ var laLigaGoals = 43;
+ var championsLeagueGoals = 10;
+ var copaDelReyGoals = 5;
+ 
+ var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals;
+
+
+ console.clear();
+
+
+ function multiTable(number) {
+  return `${1} * ${number} = ${1 * number}\n2 * ${number} = ${2 * number}\n3 * ${number} = ${3 * number}\n4 * ${number} = ${4 * number}\n5 * ${number} = ${5 * number}\n6 * ${number} = ${6 * number}\n7 * ${number} = ${7 * number}\n8 * ${number} = ${8 * number}\n9 * ${number} = ${9 * number}\n10 * ${number} = ${10 * number}`
+    
+    
+}
+console.log(multiTable(5));
+
+
+// optimalus
+// const multiTable = (number) => {
+//   let table = '';
+  
+//   for(let i = 1; i <= 10; i++) {
+//     table += `${i} * ${number} = ${i * number}${i < 10 ? '\n' : ''}`; 
+//   }
+
+//   return table;
+// }
+
+console.clear();
+
+function uefaEuro2016(teams, scores){
+  let answer = '';
+  if (scores[0] < scores[1]) {
+    return `At match ${teams[0]} - ${teams[1]}, ${teams[1]} won!`;
+  } else if (scores[0] > scores[1]) {
+    return `At match ${teams[0]} - ${teams[1]}, ${teams[0]} won!`;
+  } else {
+    return `At match ${teams[0]} - ${teams[1]}, teams played draw.`;
+  }
+}
+console.log(uefaEuro2016(['Belgium', 'Italy'], [1, 1]));
+
+console.clear();
+
+
+function elevator(left, right, call){
+  if (call === 0) {
+    return ans1 = left < right ? 'left' : 'right';
+  }
+  if (call === 0) {
+    return ans1 = left === right ? 'right' : 'right';
+  }
+  if (call === 1) {
+    return ans2 = left < right ? 'right' : 'left';
+  }
+  if (call === 1) {
+    return ans2 = left === right ? 'right' : 'right';
+  }
+  if (call === 2) {
+    return ans3 = left < right ? 'right' : 'left';
+  }
+  if (call === 2) {
+    return ans3 = left === right ? 'right' : 'right';
+  }
+
+}
+console.log(elevator(0, 1, 1));
+
+console.clear();
+
+function nextItem(xs, item) {
+  let answer = 0;
+  for (let i = 0; i < xs.length; i++) {
+    if (xs[i] === item) {
+      return xs[i+1];
+    }
+  }
+}
+console.log(nextItem([1, 2, 3, 4, 5, 6, 7], 3));
+
+
+console.clear();
+
+
+
+function sumSquares(array) {  
+  let result = array.map(n => n ** 2);
+  let answer = 0;
+  for (let i = 0; i < result.length; i++) {
+    answer += result[i];
+  }
+  return answer;
+}
+console.log(sumSquares([1,2,3,4,5]));
+
+console.clear();
+
