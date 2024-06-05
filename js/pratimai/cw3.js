@@ -1090,22 +1090,189 @@ console.log(toNumberArray(["1", "2", "3"]));
 
 console.clear();
 
+function differenceInAges(ages){
+  let youngest = ages[0];
+  let oldest = 0;
+  for (let i = 0; i < ages.length; i++) {
+    if (youngest > ages[i]) {
+      youngest = ages[i];
+    }
+    if (oldest < ages[i]) {
+      oldest = ages[i];
+    }
+    
+  }
+
+  return [youngest, oldest, oldest - youngest];
+}
+console.log(differenceInAges([22, 2, 32, 55, 70]));
+
+// optimalus
+// function differenceInAges (ages) {
+
+//   let max = Math.max(...ages),
+//       min = Math.min(...ages)
+//       diff = max - min
+      
+//   return [min, max, diff]
+// }
+
+
+console.clear();
+
+
+function sorter(textbooks) {
+  textbooks.sort(function (a, b) {
+    return a.toLowerCase().localeCompare(b.toLowerCase());
+});
+  return textbooks;
+
+}
+
+console.log(sorter(['Algebra', 'history', 'Geometry', 'english']));
+
+console.clear();
+
+
+function DNAtoRNA(dna) {
+  // create a function which returns an RNA sequence from the given DNA sequence
+  let rna = dna.replaceAll('T', 'U');
+  return rna;
+}
+console.log(DNAtoRNA("TTTT"));
+
+// optimalus
+// function DNAtoRNA(dna){
+//   return dna.replace(/T/g, 'U');
+// }
+
+console.clear();
+
+
+// function staircase(n) {
+//   for (let i = 0; i < n; i++) {
+//       let step = ' ';
+
+//    for (let j = 0; j < n; j++) {
+//       if (j <= i) {
+//         step += '#'
+//      } else {
+//         step += ' ';
+//      }
+//    }
+//    console.log(step)
+//   }
+// }
+
+
+// function drawStairs(n) {
+//   for (let i = 0; i < n; i++) {
+//     let step = ' ';
+
+//  for (let j = 0; j < n; j++) {
+//     if (j <= i) {
+//       step += 'I'
+//    } else {
+//       step += ' ';
+//    }
+//  }
+//  console.log(step)
+// }
+// }
+  
+// console.log(drawStairs(7));
+
+
+// function drawStairs(n) {
+//   var output = '';
+//   for(var i =0; i <= n; i++) {
+//       for(var j = n-1; j >= i; j--) {
+//              output += " ";
+//       }
+//       for(var k = 1; k <= i; k++) {
+//           output += "I";
+//       }
+//       output += "\n";
+//   }
+//   console.log(output);
+// }  
+// console.log(drawStairs(7));
+
+// function staircase(n) {
+//   for(let i = 1; i <= n; i++) {
+//       console.log(' '.repeat(n + i) + '#')
+//   }
+// }
+// console.log(staircase(7));
+
+
+console.clear();
+
+const rps = (p1, p2) => {
+  if (p1 === 'scissors' && p2 === 'paper') {
+    return "Player 1 won!";
+  }
+  if (p1 === 'scissors' && p2 === 'rock') {
+    return "Player 2 won!";
+  }
+  if (p1 === 'paper' && p2 === 'scissors') {
+    return "Player 2 won!";
+  }
+  if (p1 === 'paper' && p2 === 'rock') {
+    return "Player 1 won!";
+  }
+  if (p1 === 'rock' && p2 === 'scissors') {
+    return "Player 1 won!";
+  }
+  if (p1 === 'rock' && p2 === 'paper') {
+    return "Player 2 won!";
+  }
+  if (p1 === 'rock' && p2 === 'rock') {
+    return "Draw!";
+  }
+  if (p1 === 'paper' && p2 === 'paper') {
+    return "Draw!";
+  }
+  if (p1 === 'scissors' && p2 === 'scissors') {
+    return "Draw!";
+  }
+
+
+};
+
+// const rps = (p1, p2) => {
+//   if (p1 === p2) return "Draw!";
+//   var rules = {rock: "scissors", paper: "rock", scissors: "paper"};
+//   if (p2 === rules[p1]) {
+//     return "Player 1 won!";
+//   }
+//   else {
+//     return "Player 2 won!";
+//   }
+// };
+
+console.clear();
 
 
 
 
+function points(games) {
+  let points1 = 0;
+  let points2 = 0;
+  for (let i = 0; i < games.length; i++){
+    if (parseInt(games[i][0]) > parseInt(games[i][2])) {
+        points1 += 3;
+    }
+    if (parseInt(games[i][0]) === parseInt(games[i][2])) {
+      points2 += 1;
+    }
+    
+  }
+  
+  return points1 + points2;
+}
+console.log(points(["3:1", "2:2", "0:1"]));
 
-
-
-
-
-
-
-
-
-
-
-
-
+console.clear();
 
 
