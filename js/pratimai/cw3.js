@@ -1275,4 +1275,78 @@ console.log(points(["3:1", "2:2", "0:1"]));
 
 console.clear();
 
+let items = [];
+let obj = {};
+const keys = {
+  a: "b",
+  c: "d" 
+}
+obj['a'] = keys.a;
+obj['c'] = keys.c;
+items.push(obj)
 
+console.clear();
+
+function saleHotdogs(n){
+  let sum1 = 0;
+  let sum2 = 0;
+  let sum3 = 0;
+  if (n < 5) {
+    sum1 = n * 100;
+    return sum1;
+  }
+  if (n >= 5 && n < 10) {
+    sum2 = n * 95;
+    return sum2;
+  }
+  if (n >= 10) {
+    sum3 = n * 90;
+    return sum3;
+  }
+
+}
+console.log(saleHotdogs(10));
+
+
+// optimalus
+// function saleHotdogs(n){
+//   return n*(n<5?100:n<10?95:90);
+// }
+
+console.clear();
+
+function pickIt(arr){
+  let odd = [];
+  let even = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      even.push(arr[i]);
+    } else {
+      odd.push(arr[i]);
+    }
+  }
+  
+  
+  return [odd, even];
+}
+
+console.clear();
+
+
+function padIt(str, n) {
+  let string = str;
+  let i = 1;
+    while(i <= n) {
+        if(i % 2 === 0) {
+            string = string + "*";
+        }
+        else{
+            string = "*" + string;
+        }
+        i++;
+    }
+  return string;
+}
+console.log(padIt('a', 3));
+
+console.clear();
