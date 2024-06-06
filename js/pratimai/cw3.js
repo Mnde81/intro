@@ -1350,3 +1350,152 @@ function padIt(str, n) {
 console.log(padIt('a', 3));
 
 console.clear();
+
+function mystery(results2) {
+  let results = results2
+    
+  return {sanity: 'Hello'};
+    
+}
+console.log(mystery());
+
+console.clear();
+
+
+function howManydays(month){
+  var days = month;
+  switch (days){
+      case 1: days = 31;
+      break;
+      case 2: days = 28;
+      break;
+      case 3: days = 31;
+      break;
+      case 4: days = 30;
+      break;
+      case 5: days = 31;
+      break;
+      case 6: days = 30;
+      break;
+      case 7: days = 31;
+      break;
+      case 8: days = 31;
+      break;
+      case 9: days = 30;
+      break;
+      case 10: days = 31;
+      break;
+      case 11: days = 30;
+      break;
+      case 12: days = 31;
+      break;
+      
+  
+  }
+  return days;
+}
+console.log(howManydays(10));
+
+
+console.clear();
+
+var a1="A",a2="a",b1="B",b2="b",c1="C",c2="c",d1="D",d2="d",e1="E",e2="e",n1="N",n2="n"
+function Dad(){
+  //select some variable to combine "Dad"
+  return d1+a2+d2;
+}
+console.log(Dad());
+
+function banana(){
+  //select some variable to combine "banana"
+  return b2+a2+n2+a2+n2+a2;
+}
+console.log(banana());
+
+console.clear();
+
+
+function getLength(arr){
+  //return length of arr
+  return arr.length;
+}
+function getFirst(arr){
+  //return the first element of arr
+  return arr[0];
+}
+function getLast(arr){
+  //return the last element of arr
+  return arr[arr.length-1];
+}
+function pushElement(arr){
+  var el=1;
+  //push el to arr
+  arr.push(el);
+  
+  return arr;
+}
+function popElement(arr){
+  //pop an element from arr
+  var el=1;
+  arr.pop(el);
+  return arr;
+}
+
+
+console.clear();
+
+
+function grabDoll(dolls){
+  var bag=[];
+  for (let i = 0; i < dolls.length; i++) {
+    if (dolls[i] === "Hello Kitty" || dolls[i] === "Barbie doll" ) {
+      bag.push(dolls[i]);
+      if (bag.length === 3) break;
+    } else {
+      continue;
+    }
+  }
+  
+  return bag;
+}
+
+
+console.clear();
+
+
+function whatNumberIsIt(n){
+  if (n === Number.MAX_VALUE) {
+    return "Input number is Number.MAX_VALUE";
+  } else
+  if (n === Number.MIN_VALUE) {
+    return "Input number is Number.MIN_VALUE";
+  } else
+  if (isNaN(n)) {
+    return "Input number is Number.NaN";
+  } else
+  if (n === Number.NEGATIVE_INFINITY) {
+    return "Input number is Number.NEGATIVE_INFINITY";
+  } else
+  if (n === Number.POSITIVE_INFINITY) {
+    return "Input number is Number.POSITIVE_INFINITY";
+  } else
+    return `Input number is ${n}`
+  } 
+
+console.log(whatNumberIsIt(NaN));
+
+
+// optimalus
+// function whatNumberIsIt(n){
+//   switch (true) {
+//     case (n==Number.MAX_VALUE): return "Input number is Number.MAX_VALUE";
+//     case (n==Number.POSITIVE_INFINITY): return "Input number is Number.POSITIVE_INFINITY";
+//     case (n==Number.MIN_VALUE): return "Input number is Number.MIN_VALUE";
+//     case (n==Number.NEGATIVE_INFINITY): return "Input number is Number.NEGATIVE_INFINITY";
+//     case (isNaN(n)): return "Input number is Number.NaN";
+//     default: return "Input number is " + n;
+//   }
+// }
+
+console.clear();
+
