@@ -1499,3 +1499,242 @@ console.log(whatNumberIsIt(NaN));
 
 console.clear();
 
+
+function howManySmaller(arr, n){
+  let fixedNums = arr.map(x => parseFloat(x.toFixed(2)));
+  let count = 0;
+  for (let i = 0; i < fixedNums.length; i++) {
+    if (fixedNums[i] < n) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(howManySmaller([1.234,1.235,1.228], 1.24));
+
+// optimalus
+// function howManySmaller(arr,n){
+//   return arr.filter(x => +x.toFixed(2) < n).length;
+// }
+
+console.clear();
+
+function cutIt(arr){
+  let shortest = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length < shortest.length) {
+      shortest = arr[i];
+    }
+  }
+  let cutArr = arr.map(n => n.slice(0, shortest.length))
+ return cutArr;
+}
+console.log(cutIt(["ab","cde","fgh"]));
+
+// optimalus
+// function cutIt(arr){
+//   const minLength = Math.min(...arr.map(x => x.length));
+//   return arr.map(x => x.slice(0, minLength));
+// }
+
+console.clear();
+
+
+function firstToLast(str, c){
+   let firstIndex = str.indexOf(c); 
+  let lastIndex = str.lastIndexOf(c);
+  
+  if (firstIndex === -1) {
+    return -1;
+  } else if (firstIndex === lastIndex) {
+    return 0;
+  } else {
+  return lastIndex - firstIndex;
+  }
+  
+}
+console.log(firstToLast("ababcddd","d"));
+
+
+// optimalus
+// function firstToLast(str,c){
+//   var first = str.indexOf(c), last = str.lastIndexOf(c);
+//   return first == -1 ? -1 : last - first;
+// }
+
+console.clear();
+
+function fiveLine(s){
+  let a = s.trim();
+  return `${a}\n${a}${a}\n${a}${a}${a}\n${a}${a}${a}${a}\n${a}${a}${a}${a}${a}`;
+  
+}
+console.log(fiveLine(' b'));
+
+// optimlaus
+// function fiveLine(s){
+//   //coding here...
+//   s = s.trim();
+//   var tmp = s;
+//   var res = [s];
+  
+//   for (var i = 1; i < 5; i++) {
+//    	res.push(s += tmp);
+//   } 
+//   return res.join("\n");
+// }
+
+console.clear();
+
+function blackAndWhite(arr){
+  const a = arr;
+  if (!Array.isArray(a)) {
+    return "It's a fake array";
+  } else if (a.includes(5) && a.includes(13)) {
+    return "It's a black array";
+  } else {
+    return "It's a white array";
+  }
+
+  
+}
+console.log(blackAndWhite([5, 12]));
+
+// optimalus
+// const blackAndWhite = arr =>
+//   `It's a ${!Array.isArray(arr) ? `fake` : arr.includes(5) && arr.includes(13) ? `black` : `white`} array`;
+
+console.clear();
+
+
+function animal(obj){
+  return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+}
+console.log(animal({name:"dog",legs:4,color:"white"}));
+
+
+console.clear();
+
+
+function feast(beast, dish) {
+  if (beast[0] === dish[0] && beast[beast.length-1] === dish[dish.length-1] ) {
+  
+    return true;
+  } else {
+    return false;
+  }
+  }
+  console.log(feast("great blue heron", "garlic naan"));
+  
+console.log(feast("chickadee", "chocolate cak"));
+
+// optimalus
+// function feast(beast, dish) {
+// 	return beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
+// }
+
+console.clear();
+
+
+function chromosomeCheck(sperm) {
+  if (sperm === 'XX') {
+    return 'Congratulations! You\'re going to have a daughter.'
+  } 
+  if (sperm === 'XY') {
+    return 'Congratulations! You\'re going to have a son.'
+  }
+}
+
+// optimalus
+// function chromosomeCheck(sperm) {
+//   return `Congratulations! You're going to have a ${sperm === 'XY' ? 'son' : 'daughter'}.`
+// }
+
+
+console.clear();
+
+
+function alienLanguage(str){
+  let st = str.toUpperCase().split(' ');
+  let st1 = '';
+  let st2= '';
+  let st3 = '';
+  for (let i = 0; i < st.length; i++) {
+    let st1 = st[i];
+    st2 = st1.slice(0, -1)
+    st2 = st2 + st1[st1.length-1].toLowerCase()
+    st3 += st2 + ' ';    
+    
+  }
+  
+  return st3.trim();
+}
+console.log(alienLanguage("Hello World"));
+
+// optimalus
+// function alienLanguage(str){
+//   return str.replace(/\w+/g, w => w.slice(0,-1).toUpperCase() + w.slice(-1).toLowerCase());
+// }
+
+
+console.clear();
+
+function cookie(x){
+  let name = '';
+  if (typeof x === 'string') {
+    name = 'Zach';
+  } else if (typeof x === 'number') {
+    name = 'Monica'
+  } else {
+    name = 'the dog';
+  }
+
+return `Who ate the last cookie? It was ${name}!`
+}
+console.log(cookie(1));
+
+// optimalus
+// function cookie(x) {
+//   var t = typeof x
+//   var who = t=="string" ? 'Zach' : t=="number" ? 'Monica' : 'the dog'
+//   return `Who ate the last cookie? It was ${who}!`
+// }
+
+console.clear();
+
+function _if(bool, func1, func2) {
+  return bool == true ? func1() : func2();
+}
+
+// optimalus
+// function _if(bool, func1, func2) {
+//   return bool ? func1() : func2();
+// }
+
+console.clear();
+
+
+function isPythagoreanTriple(integers) {
+  let n1 = integers[0];
+  let n2 = integers[1];
+  let n3 = integers[2];
+
+  if (n1**2 + n2**2 === n3**2 || n3**2 + n2**2 === n1**2 || n3**2 + n1**2 === n2**2) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(isPythagoreanTriple([5, 3, 4]));
+
+
+// optimalus
+// function isPythagoreanTriple(integers) {
+//   let massiv = integers.sort((a, b) => a - b)
+//   return (massiv[0] ** 2 + massiv[1] ** 2 == massiv[2] ** 2)
+// }
+
+console.clear();
+
+
+

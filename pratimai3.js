@@ -299,8 +299,72 @@ function shortest(array) {
 
 
 // Suskaičiuoti kiek stringų turi daugiau nei 4 žodžius;
+
+function countString(array) {
+    let sum = 0;
+    for (let i =0; i < array.length; i++) {
+        let count = array[i].split(' ').length;
+        if (count > 4) {
+            sum++
+        }
+    }
+    return sum;
+}
+
+
 // Suskaičiuoti kiek masyve yra žodžių;
+
+function allWords(array) {
+    let countAllWords = 0;
+    for (let i =0; i < array.length; i++) {
+        countAllWords += array[i].split(' ').length
+}
+return countAllWords;
+}
+
+
+
 // Suskaičiuoti visas ‘s’ raides;
-// Suskaičiuoti kiek masyve yra raidžių (tarpų tarp žodžių neskaičiuoti!);
+
+function allS(array) {
+    let totalS = 0;
+    for (let i =0; i < array.length; i++) {
+        let str = array[i];
+         for (let j =0; i < str.length; j++) {
+            if (str[j] === 's' || str[j] === 'S') {
+            totalS++;
+            }
+         }
+    
+    }
+    return totalS;
+}
+
+// Suskaičiuoti kiek masyve yra raidžių (tarpų tarp žodžių neskaičiuoti! neskaiciuoti skaiciu);
+
+function howMuchLetter(array) {
+    let count = 0;
+    for (let i =0; i < array.length; i++) {
+        let str = array[i].replace(/\s+/g, '')            // count += (array[i].match(/[A-Z]/gi) || []).length;
+        count += str.length;
+    }
+    return count;
+}
+
+
 // Surasti ilgiausią žodį (ne stringą, o atskirą stringo žodį!);
 
+function longestWord(array) {
+    let word = '';
+    
+    for (let i =0; i < array.length; i++) {
+        let words =  array[i].split(' ');
+        for (let j = 0; j < words.length; j++) {
+            if (words[j].length > word.length) {
+                word = words[j];
+            }
+        }
+
+    }
+    return word;   //cleanliness
+}
