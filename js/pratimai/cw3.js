@@ -1737,4 +1737,159 @@ console.log(isPythagoreanTriple([5, 3, 4]));
 console.clear();
 
 
+function hotpo(n) {
+   let count = 0;
+     while (n !== 1) {
+        if (n % 2 === 0) {                                      
+            n = n / 2; 
+            count++;
+        } else if (n % 2 !== 0) {
+            n = (n * 3) + 1;
+            count++;
+        }
+    }
+    return count;
+
+}
+
+console.log(hotpo(23));
+
+// optimalus
+// var hotpo = function(n, acc = 0) {
+//   if (n <= 1) {
+//     return acc;
+//   } else {
+//     return hotpo(n%2==0 ? n/2 : 3*n+1, acc+1);
+//   }
+// }
+
+
+
+
+
+
+
+
+function alternateCase(str) {
+  let result = '';
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[i].toUpperCase()) {
+      result += str[i].toLowerCase();
+    } else {
+      result += str[i].toUpperCase();
+    }
+  }
+  return result;
+}
+console.log(alternateCase("1a2b3c4d5e"));
+
+
+console.clear();
+
+
+function noBoringZeros(n) {
+  let numbers = n.toString();
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers.endsWith('0')) {
+      numbers = numbers.slice(0, numbers.length -1);
+    }
+  }
+  numbers = parseInt(numbers);
+  return numbers;
+}
+console.log(noBoringZeros(14500000000000));
+
+console.clear();
+
+function splitAndMerge(string, separator) {
+  let answer = string.split(' ');
+  
+  let answer2 = [];
+  for (let i = 0; i < answer.length; i++) {
+      answer2 += answer[i].split('').join(separator) + ' '
+  }
+ 
+
+  return answer2.trim();
+}
+console.log(splitAndMerge("My name is John", "-"));
+
+// optimalus
+// function splitAndMerge(str, sp) {
+//   return str.split(" ").map(word => word.split("").join(sp)).join(" ");
+// }
+
+console.clear();
+
+
+function expressionMatter(a, b, c) {
+  const first = a * (b + c);
+  const second = a * b * c;
+  const third = a + b * c;
+  const fourth = (a + b) * c;
+  const fifth = a * b + c;
+  let string = `${first},${second},${third},${fourth},${fifth}`;
+  let arr = string.split(',');
+  console.log(arr);
+  let high = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > high) {
+      high = arr[i];
+    }
+  }
+
+  return parseFloat(high);
+
+}
+console.log(expressionMatter(1, 2, 3));
+
+
+console.clear();
+
+function bigToSmall(arr){
+  let arr2 = arr.flat().sort((a, b) => b - a).join('>')
+  return arr2;
+}
+console.log(bigToSmall([[1,2],[3,4],[5,6]]));
+
+console.clear();
+
+
+function trueOrFalse(val){
+  return Boolean(val).toString();
+}
+
+console.clear();
+
+
+
+function roundIt(n){
+  let nString = n.toString();
+  const decimalIndex = nString.indexOf('.');
+  const decimalPlaces = nString.length - decimalIndex -1
+  const intPlaces = nString.length - decimalPlaces -1
+ 
+
+  if (intPlaces < decimalPlaces) {
+    return Math.ceil(n);
+  }
+  if (intPlaces > decimalPlaces) {
+    return Math.floor(n);
+  }
+  if (intPlaces === decimalPlaces) {
+    return Math.round(n);
+  }
+  
+}
+console.log(roundIt(3.45));
+
+
+// optimalus
+// function roundIt(n){
+//   var [a, b] = n.toString().split('.');
+//   return a.length > b.length ? Math.floor(n) : a.length === b.length ? Math.round(n) : Math.ceil(n);
+// }
+
+
+console.clear();
 
