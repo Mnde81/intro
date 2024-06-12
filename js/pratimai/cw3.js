@@ -1893,3 +1893,165 @@ console.log(roundIt(3.45));
 
 console.clear();
 
+function countPositivesSumNegatives(input) {
+  let countPositives = 0;
+  let sumNegatives = 0;
+  for (let i = 0; i < input.length; i++) {
+      if (input[i] > 0) {
+          countPositives++
+      } else {
+          sumNegatives += input[i];
+      }
+  }
+  if (input === '[]' || input === null) {
+      return [];
+  } else {
+      return [countPositives, sumNegatives];
+
+  }
+  
+}
+console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+
+console.clear();
+
+function calculateTip(amount, rating) {
+  let tipRating = rating.toLowerCase();
+  if (tipRating === 'terrible') {
+    return 0;
+  } else if (tipRating === 'poor') {
+    return Math.ceil(amount * 0.05);
+  } else if (tipRating === 'good') {
+    return Math.ceil(amount * 0.1);
+  } else if (tipRating === 'great') {
+    return Math.ceil(amount * 0.15);
+  } else if (tipRating === 'excellent') {
+    return Math.ceil(amount * 0.2);
+  } else {
+    return 'Rating not recognised';
+  }
+
+
+}
+console.log(calculateTip(100, 'Great'));
+
+// optimalus
+// const TIPS = {
+//   "terrible": 0.0,
+//   "poor": 0.05,
+//   "good": 0.1,
+//   "great": 0.15,
+//   "excellent": 0.2
+// };
+
+// const calculateTip = (amount, rating) => {
+//   rating = rating.toLowerCase();
+  
+//   return rating in TIPS ? Math.ceil(TIPS[rating] * amount) : "Rating not recognised";
+// };
+
+
+console.clear();
+
+function mergeArrays(a, b) {
+  let arr1 = [];
+  let arr2 = [];
+  for (let i = 0; i < a.length; i++) {
+    if (!arr1.includes(a[i])) {
+      arr1.push(a[i]);
+    }  
+}
+for (let i = 0; i < b.length; i++) {
+  if (!arr1.includes(b[i])) {
+    arr1.push(b[i]);
+  }  
+}
+
+
+   arr2 = arr1.sort((a, b) => a - b);
+   return arr2;
+}
+console.log(mergeArrays([1, 3, 5], [2, 4, 6]));
+
+// optimalus
+// function mergeArrays(a, b) {
+//   return [...new Set(a.concat(b))].sort((a,b)=>a-b);
+// }
+
+console.clear();
+
+function changeMe(moneyIn){
+  if (moneyIn === "£5") {
+    return '20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p 20p';
+  } else if (moneyIn === "£2") {
+    return '20p 20p 20p 20p 20p 20p 20p 20p 20p 20p';
+  } else if (moneyIn === "£1") {
+    return '20p 20p 20p 20p 20p';
+  } else if (moneyIn === "50p") {
+    return '20p 20p 10p';
+  } else if (moneyIn === "20p") {
+    return '10p 10p';
+  } else {
+    return 'Money';
+  }
+}
+console.log(changeMe('£2'));
+
+console.clear();
+
+
+function collinearity( x1, y1, x2, y2 ) {
+  let coefX = x1 / x2;
+  let coefY = y1 / y2;
+   if (coefX === coefY) {
+    return true;
+   };
+   if (x2 === 0 && y2 === 0) {
+    return true;
+   }
+   if (x2 === 0 && y2 === 0 && x2 === 0 && y2 === 0) {
+    return true;
+   } else {
+    return false;
+   }
+}
+
+console.clear();
+
+function flickSwitch(arr){
+  let arr2 = [];
+  let bool = true;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== 'flick') {
+      arr2.push(bool);
+    } else {
+      arr2.push(!bool);
+      bool = !bool;
+    }
+  }
+  return arr2;
+}
+console.log(flickSwitch(['bicycle', 'jarmony', 'flick', 'sheep', 'flick']));
+
+// optimalus
+// function flickSwitch(arr){
+//   let returning = true;
+//     return arr.map( (v) => {
+//       return (v === "flick") ? returning = !returning : returning;
+//     })
+// }
+
+console.clear();
+
+isValid = formula => !(formula.includes(1) && formula.includes(2)) 
+                    && !(formula.includes(3) && formula.includes(4))
+                    && (formula.includes(5) === formula.includes(6)) 
+                    && (formula.includes(7) || formula.includes(8)) 
+console.log(isValid([5,6,7,8]));
+
+console.clear();
+
+
+
+
+
