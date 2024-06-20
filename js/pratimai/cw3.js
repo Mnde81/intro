@@ -2051,7 +2051,265 @@ console.log(isValid([5,6,7,8]));
 
 console.clear();
 
+noBoringZeros = n => +`${n}`.replace(/0+$/,'');
+
+console.log(noBoringZeros(105000));
+
+
+console.clear();
+
+function sumMul(n, m) {
+  if (m <= n) {
+    return 'INVALID';
+  }
+  let s = 0;
+  for (let i = n; i < m; i += n) {
+    s += i;
+  }
+ return s;
+}
+console.log(sumMul(4, 123));
+
+console.clear();
 
 
 
+drawStairs = n => [...Array(n)].map((_,index) => ' '.repeat(index) + 'I').join('\n');
+
+console.log(drawStairs(7));
+
+// function drawStairs(n) {
+//   let result = [];
+  
+//   for (let i = 0; i < n; i++) {
+//     result[i] = `${' '.repeat(i)}I`;
+//   }
+  
+//   return result.join('\n');
+// }
+
+console.clear();
+
+
+calculateTip = (amount, rating) => (tipScale => tipScale < 0 ? 'Rating not recognised' : Math.ceil(amount * tipScale * .05))
+(['terrible', 'poor', 'good', 'great', 'excellent'].indexOf(rating.toLowerCase()));
+
+console.log(calculateTip(100, 'Excellent'));
+
+
+// const TIPS = {
+//   "terrible": 0.0,
+//   "poor": 0.05,
+//   "good": 0.1,
+//   "great": 0.15,
+//   "excellent": 0.2
+// };
+
+// const calculateTip = (amount, rating) => {
+//   rating = rating.toLowerCase();
+  
+//   return rating in TIPS ? Math.ceil(TIPS[rating] * amount) : "Rating not recognised";
+// };
+
+
+console.clear();
+
+function iceBrickVolume(radius, bottleLength, rimLength) {
+  let a = Math.sqrt((2*radius)*(2*radius)/2);
+  return Math.round(a * a * (bottleLength-rimLength));
+}
+
+// optimalus
+// const iceBrickVolume = (r, x, y) => 2 * r * r * (x - y);
+
+console.clear();
+
+
+function take(arr, n) {
+  return arr.slice(0, n);
+}
+
+console.clear();
+
+function leo(oscar){
+  if (oscar === 88) {
+    return "Leo finally won the oscar! Leo is happy";
+  }
+  if (oscar === 86) {
+    return "Not even for Wolf of wallstreet?!";
+  }
+  if (oscar < 88 && oscar !==86 && oscar !==88  ) {
+    return  "When will you give Leo an Oscar?";
+  }
+  if (oscar > 88) {
+    return "Leo got one already!";
+  }
+
+}
+
+// optimalus
+// const leo = (oscar) => {
+//   return oscar === 88 ? 'Leo finally won the oscar! Leo is happy' :
+//          oscar === 86 ? 'Not even for Wolf of wallstreet?!'       :
+//          oscar  <  88 ? 'When will you give Leo an Oscar?'        :
+//          'Leo got one already!';
+// };
+
+
+console.clear();
+
+
+function pipeFix(numbers){
+ 
+  let minN = Math.min(...numbers);
+  let maxN = Math.max(...numbers);
+   
+  let arr = [];
+  for (let i = minN; i <= maxN; i++) {
+    arr.push(i)
+
+  }
+  return arr;
+  
+}
+console.log(pipeFix([1, 3, 5, 6, 7, 8]));
+
+
+ // let minN = Math.min.apply(Math, arguments);
+  // let maxN = Math.max.apply(Math, arguments);
+
+
+  console.clear();
+
+  function warnTheSheep(queue) {
+    let sheepNumber = 0;
+    if (queue.indexOf('wolf') === queue.length-1) {
+      return "Pls go away and stop eating my sheep"
+    } else {
+        queue.reverse();
+        sheepNumber = queue.indexOf('wolf')
+        return `Oi! Sheep number ${sheepNumber}! You are about to be eaten by a wolf!`
+    }
+
+
+  }
+  console.log(warnTheSheep(["sheep", "sheep", "sheep", "wolf", "sheep"]));
+
+
+  // optimalus
+  // function warnTheSheep(queue) {
+  //   const position = queue.reverse().indexOf('wolf');
+  //   return position === 0 ? 'Pls go away and stop eating my sheep' : `Oi! Sheep number ${ position }! You are about to be eaten by a wolf!`;
+  // }
+
+  console.clear();
+
+  function remove(s, n){
+    let str = '';
+    let count = 0;
+    for (let i = 0; i < s.length; i++) {
+      
+      if (s[i] === '!') {
+        s = s.replace('!', ',');
+        count++
+        if (count === n) {
+          break;
+        }
+    
+      }
+    
+    }
+    
+    return s.replaceAll(',', '');
+    
+    
+  }
+  console.log(remove("!!!Hi !!hi!!! !hi",5));
+
+  console.clear();
+
+
+  function stairsIn20(s){
+    let sumMonday = 0;
+    for (let i = 0; i < s[0].length; i++) {
+      sumMonday += s[0][i];
+    }
+    let sumTuesday = 0;
+    for (let i = 0; i < s[1].length; i++) {
+      sumTuesday += s[1][i];
+    }
+    let sumWednesday = 0;
+    for (let i = 0; i < s[2].length; i++) {
+      sumWednesday += s[2][i];
+    }
+    let sumThursday = 0;
+    for (let i = 0; i < s[3].length; i++) {
+      sumThursday += s[3][i];
+    }
+    let sumFriday = 0;
+    for (let i = 0; i < s[4].length; i++) {
+      sumFriday += s[4][i];
+    }
+    let sumSaturday = 0;
+    for (let i = 0; i < s[5].length; i++) {
+      sumSaturday += s[5][i];
+    }
+    let sumSunday = 0;
+    for (let i = 0; i < s[6].length; i++) {
+      sumSunday += s[6][i];
+    }
+
+    return (sumMonday + sumTuesday + sumWednesday + sumThursday + sumFriday + sumSaturday + sumSunday) * 20;
+  }
+
+//   optimalus
+//   // A proper solution
+// function stairsIn20(a) {
+//   return 20 * a.reduce((s, a) => s + a.reduce((s, n) => s + n, 0), 0);
+// }
+
+console.clear();
+
+function betterThanAverage(classPoints, yourPoints) {
+  let sumClass = 0;
+  let countClass = 0;
+  for (let i = 0; i < classPoints.length; i++) {
+    sumClass += classPoints[i];
+    countClass++
+  }
+  let averageClass = sumClass / countClass;
+  return yourPoints > averageClass;
+}
+
+// optimalus
+// function betterThanAverage(classPoints, yourPoints) {
+//   return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length; 
+// }
+
+console.clear();
+
+
+var humanYearsCatYearsDogYears = function(humanYears) {
+  let catYears = 0;
+  let dogYears = 0;
+if (humanYears === 1) {
+  catYears = 15;
+  dogYears = 15;
+}
+if (humanYears > 1) {
+  catYears = 15 + 9 + (humanYears - 2) * 4;
+  dogYears = 15 + 9 + (humanYears - 2) * 5;
+}
+
+  return [humanYears, catYears, dogYears];
+}
+
+// optimalus
+// var humanYearsCatYearsDogYears = function(y) {
+//   if (y == 1) return [1, 15, 15]
+//   if (y == 2) return [2, 24, 24]
+//   return [y, (y-2) * 4 + 24, (y-2) * 5 + 24]
+// }
+
+console.clear();
 
