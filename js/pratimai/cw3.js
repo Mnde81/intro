@@ -2313,3 +2313,157 @@ if (humanYears > 1) {
 
 console.clear();
 
+function  calculateAge(yearBirth, countYear) {
+
+  if (yearBirth === countYear) {
+    return "You were born this very year!";
+  }
+  let count = 0;
+  if (yearBirth < countYear) {
+    count = countYear - yearBirth;
+    if (count === 1) {
+      return `You are ${count} year old.`;
+    } else {
+      return `You are ${count} years old.`;
+    }
+
+    
+  }
+  if (yearBirth > countYear) {
+    count = yearBirth - countYear;
+    if (count === 1) {
+      return `You will be born in ${count} year.`; 
+    } else {
+      return `You will be born in ${count} years.`; 
+    }
+    
+  
+  }
+}
+
+// optimalus
+// function  calculateAge(m, n) {
+// 	if(m == n) return 'You were born this very year!';
+//   var year = Math.abs(m-n) == 1 ? 'year' : 'years';
+//   if(m < n) return "You are "+(n-m)+' '+year+' old.';
+//   if(m > n) return "You will be born in "+(-n+m)+' '+year+'.';
+// }
+
+console.clear();
+
+
+
+
+function remove (string) {
+  let s = '';
+  console.log(string[string.length-1]);
+
+  if (string[string.length-1] === "!") {
+    s = string.substring(0, string.length - 1);
+    return s;
+  } else {
+    return string;
+  }
+  
+  
+}
+console.log(remove("Hi!" ));
+
+// optimalus
+// const remove = s => s.replace(/!$/, '');
+
+console.clear();
+
+function stringy(size) {
+  let str = '';
+  for (let i = 0; i < size; i++) {
+     if (i % 2 === 0) {
+      str += 1;
+     } else {
+      str += 0;
+     }
+
+  }   
+  return str;
+}
+console.log(stringy(12));
+
+
+// optimalus
+
+// function stringy(size) {
+//   var str='';
+//   for( var i=1; i<=size; i++ )
+//     str+=i%2;
+//   return str;
+// }
+
+console.clear();
+
+
+function remove (string) {
+  let charToRemove = "!";
+  let regex = new RegExp(charToRemove, 'g');
+  let result = string.replace(regex, '');
+  result = result + '!';
+  return result;  
+}
+
+// optimalus
+// const remove = s => s.replace(/!+/g, "")+"!";
+
+console.clear();
+
+
+function countWords(str) {
+   let arr = str.split(' ');
+   console.log(arr);
+
+   return arr.length;
+}
+console.log(countWords("No results for search term `s`"));
+
+console.clear();
+
+function gHappy(str) {
+  let answer = false;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === 'g' && str[i] === str[i+1]) {
+      answer = true;
+    } else {
+      answer = false;
+    }
+  }
+    return answer;
+}
+
+console.clear();
+
+function tailSwap(arr) {
+  let a = arr[0];
+  let b = arr[1];
+  a = a.split(':');
+  b = b.split(':');
+  let ansA = `${a[0]}:${b[1]}`;
+  let ansB = `${b[0]}:${a[1]}`;
+  let newArr = [];
+  newArr.push(ansA);
+  newArr.push(ansB);
+  
+  return newArr;
+}
+console.log(tailSwap(["abc:123", "cde:456"]));
+
+// optimalus
+// function tailSwap(arr) {
+//   let newArr = arr
+//   .map(string => string.split(':'))
+//   return [newArr[0][0]+':'+newArr[1][1], newArr[1][0]+':'+newArr[0][1]];
+// }
+
+console.clear();
+
+
+
+
+
