@@ -2463,6 +2463,96 @@ console.log(tailSwap(["abc:123", "cde:456"]));
 
 console.clear();
 
+var lengthOfSequence = function (arr, n) {
+  let count = 0;
+   for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === n) {
+      count++;
+    }
+   }
+   if (count !== 2) {
+    return 0;
+   }
+   let fIndex = arr.indexOf(n);
+   let lIndex = arr.lastIndexOf(n);
+   return lIndex - fIndex +1;
+   
+};
+console.log(lengthOfSequence([0, -3, 7, 4, 0, 3, 7, 9], 7));
+
+// optimalus
+// function lengthOfSequence(arr, n){
+//   return arr.count(n) == 2 ? arr.lastIndexOf(n) - arr.indexOf(n) + 1 : 0;
+// }
+
+// Array.prototype.count = function(n){
+//   return this.filter(function(v){ return v == n }).length;
+// }
+
+console.clear();
+
+
+function cubeVolume(h, r) {
+  let c = Math.sqrt(2 * r * r)
+  let volume = 0;
+  if (c >= h ) {
+    volume = h * h * h;
+  } else {
+    volume = c * c * c;
+  }
+  return volume;
+}
+console.log(cubeVolume(11, 5));
+
+console.clear();
+
+function mostLikely(prob1,prob2){
+   let firstArr = prob1.split(':');
+   let firstProb = firstArr[0] / firstArr[1];
+   let secondArr = prob2.split(':');
+   let secondProb = secondArr[0] / secondArr[1];
+
+   return firstProb > secondProb;
+}
+console.log(mostLikely('1:3', '1:2'));
+
+// optimalus
+// const divide = (a, b) => a / b;
+// const mostLikely = (p1, p2) => divide(...p1.split(':')) > divide(...p2.split(':'));
+
+console.clear();
+
+function equableTriangle(a,b,c) {
+   let p = (a + b + c) /2
+   let area = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+   let perimeter = a + b + c;
+
+   return area === perimeter;    
+  }
+  console.log(equableTriangle(3, 4, 5));
+
+  console.clear();
+
+  function timeForMilkAndCookies(date){
+    const d = new Date(date);
+    const month = d.getMonth() + 1;
+    const day = d.getDate();
+
+    if (month === 12 && day === 24) {
+      return true;
+    } else {
+      return false;
+    }
+
+  
+  }
+
+  // optimalus
+  // function timeForMilkAndCookies(date){
+  //   return date.getDate() == 24 && date.getMonth() == 11;
+  // }
+
+  console.clear();
 
 
 
