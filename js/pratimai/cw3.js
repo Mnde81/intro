@@ -2554,6 +2554,226 @@ function equableTriangle(a,b,c) {
 
   console.clear();
 
+  function nothingSpecial(str) { 
+    if (typeof str !== 'string') {
+      return "Not a string!";
+    }
+     var specialChars = "'';~\"`_!@#$^&%*()+=-[]\/{}|:<>?,.";
+     for (let i = 0; i < specialChars.length; i++) {
+       str = str.replace(new RegExp("\\" + specialChars[i], "gi"), "");
+     }
+     return str;
+   }
+
+  //  optimalus
+  //  function nothingSpecial(str) {
+  //   return typeof str === "string" ? str.replace(/[^a-z\d\s]+/ig, "") : "Not a string!"
+  // }
+
+  console.clear();
+
+  
+  obfuscate = function(email) {
+    let string = '';    
+      string = email.replaceAll('.',' [dot] ').replaceAll('@', ' [at] ');
+      console.log(string);
+    return string;
+    
+  }
+  console.log(obfuscate("af5134@borchmore.edu"));
+
+
+// optimalus
+// const obfuscate = email => email.replace(/@/gi, " [at] ").replace(/\./gi, " [dot] ");
+
+console.clear();
+
+
+function sumDigits(number) {
+  if (number < 0) {
+    number = number  * (-1)
+  }
+  let string = number.toString();
+  let arr = string.split('');
+  let sum = 0;
+  
+  for (let i = 0; i < arr.length; i++) {
+  sum = sum + parseFloat(arr[i]);
+
+  }
+  return sum;
+}
+console.log(sumDigits(-32));
+
+// optimalus
+// function sumDigits(number) {
+//   return Math.abs(number).toString().split('').reduce(function(a,b){return +a + +b}, 0);
+// }
+
+console.clear();
+
+function bearDollars(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i][1].toLowerCase() === 'close friend') {
+      sum = sum + arr[i][0] * 25;
+  } else if (arr[i][1].toLowerCase() === 'friend') {
+    sum = sum + arr[i][0] * 50;
+  } else if (arr[i][1].toLowerCase() === 'acquaintance') {
+    sum = sum + arr[i][0] * 100;
+  } else {
+    sum = sum + arr[i][0] * 125;
+  }
+  
+  }
+  return sum;
+  
+}
+console.log(bearDollars([[10, 'Close Friend'], [3, 'Acquaintance'], [7, 'Lead from web'], [6, 'Friend'], [2, 'From advertisements']]));
+
+// optimalus
+// function bearDollars(arr) {
+//   var obj = {'close friend': 1, 'friend': 2, 'acquaintance': 4};
+//   return arr.reduce((a,b) => a + (b[0] * ((obj.hasOwnProperty(b[1].toLowerCase())) ? obj[b[1].toLowerCase()] : 5) * 25), 0);
+// }
+
+console.clear();
+
+
+function factorialDivision(n, d) {
+  let nFact = 1;
+  let dFact =1;
+  for (let i = 1; i <= n; i++) {
+    nFact = nFact * i;
+  }
+  for (let i = 1; i <= d; i++) {
+    dFact = dFact * i;
+  }
+
+  return nFact /dFact;
+
+  
+
+}
+console.log(factorialDivision(5, 3));
+
+console.clear();
 
 
 
+function sumNoDuplicates(numList) {  
+    let arr = numList.filter((value, index) => numList.indexOf(value) !== index);
+    
+    let sum = 0;
+    let arr2 = [];
+    for (let i = 0; i < numList.length; i++) {
+      if (!arr.includes(numList[i])) {
+        arr2.push(numList[i]);
+      }
+    }
+    return arr2.reduce((partialSum, a) => partialSum + a, 0); 
+  
+}
+
+console.log(sumNoDuplicates([1, 10, 3, 10, 10, 10, 4, 4]));
+
+// optimalus
+// function sumNoDuplicates(numList) {
+//   const uniqueArr=numList.filter((num,index)=>numList.indexOf(num)===index&&numList.lastIndexOf(num)===index)
+//   return uniqueArr.reduce((x,y)=>x+y,0);
+//   }
+
+console.clear();
+
+
+const sequenceSum = (begin, end, step) => {
+  if (begin > end) {
+    return 0;
+  }
+  let sum = 0;
+  for (let i = begin; i <= end; i +=step) {
+      sum = sum + i;
+  }
+  return sum;
+};
+console.log(sequenceSum(2, 6, 2));
+
+console.clear();
+
+
+function squeakyClean(arr) {
+  let arr2= [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== null && arr[i] !== 0 && arr[i] !== '' && arr[i] !== undefined ) {
+      arr2.push(arr[i]);
+    }
+    
+  }
+  return arr2;
+}
+console.log(squeakyClean(['click1','click2',null,'','','submitForm', 0, undefined]));
+
+console.clear();
+
+// function drawStairs(n) {
+//   let result = [];
+  
+//   for (let i = 0; i < n; i++) {
+//     result[i] = `${' '.repeat(i)}I`;
+//   }
+  
+//   return result.join('\n');
+// }
+
+
+function generateShape(integer){
+  let result = [];
+  for (let i = 0; i < integer; i++) {
+      result[i] = `${'+'.repeat(integer)}`;
+      
+  }
+  return result.join('\n');
+}
+console.log(generateShape(3));
+
+console.clear();
+
+function coffee(str) {
+  let arr = str.split(' ');
+  let arr2 = [];
+  console.log(arr);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].toLowerCase() === 'coffee!' || arr[i].toLowerCase() === 'coffee?' || arr[i].toLowerCase() === 'coffee' || arr[i].toLowerCase() === 'coffee.' ) {
+      arr[i] = arr[i].toUpperCase();
+      arr2.push(arr[i]);
+    } else {
+      arr2.push(arr[i]);
+    }
+  }
+  return arr2.join(' ');
+}
+console.log(coffee("Coffee! Buy me a COFFEE!" ));
+
+// optimalus
+// function coffee(str) {
+//   return str.replace(/coffee/ig, "COFFEE");
+// }
+
+console.clear();
+
+
+
+function myParseInt(str) {
+  let regExp = /[A-Za-z]/;
+  if (parseFloat(str) % 1 !== 0 ) {
+    return NaN; 
+  }
+  if(regExp.test(str)){
+    return NaN;
+  } else {
+    return parseInt(str);
+  }
+}
+console.log(myParseInt("2"));
+
+console.clear();
