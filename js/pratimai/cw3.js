@@ -2777,3 +2777,73 @@ function myParseInt(str) {
 console.log(myParseInt("2"));
 
 console.clear();
+
+
+function gHappy(str) {
+  if (str === '') {
+       return true;
+    }
+   let arr2 = str.split('');
+   if (arr2.includes('g') === false) {
+    return true;
+   }
+  let answer = 0;
+  let count = 0;
+   console.log(arr2);
+  for (let i = 0; i < arr2.length; i++) {  
+     if (arr2[i] === 'g' && arr2[i+1] === 'g' || arr2[i] === 'g' && arr2[i-1] === 'g' ) {
+    answer = 1;
+  } else if (arr2[i] === 'g' && arr2[i+1] !== 'g' && arr2[i-1] !== 'g' ) {
+    count++;
+  } 
+}
+  if (count > 0) {
+    return false;
+  }
+  
+  if (answer !== 1) {
+    return false;
+  } else {
+    return true;
+  }
+}
+console.log(gHappy("A half of a half is a quarter."));
+
+// optimalus
+// const gHappy = str => !/([^g]|^)g([^g]|$)/.test(str)
+
+console.clear();
+
+
+function wordSearch(query, seq){
+  let arr =[];
+  for (let i = 0; i < seq.length; i++){
+    if (seq[i].toLowerCase().includes(query.toLowerCase())) {
+      arr.push(seq[i]);
+
+    }
+  }
+  if (arr.length === 0) {
+    return ['Empty'];
+  } else {
+    return arr;
+  }
+   
+}
+console.log(wordSearch("ab", ["ab", "abc", "zab"]));
+
+// optimalus
+// function wordSearch(query, seq){
+//   var reg = new RegExp(query,"i");
+//   var res = seq.filter(function(val){
+//     return reg.test(val);
+//   });
+//   return (res.length > 0) ? res : ["Empty"];
+// }
+
+console.clear();
+
+
+
+
+
