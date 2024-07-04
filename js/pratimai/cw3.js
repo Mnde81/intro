@@ -2843,6 +2843,139 @@ console.log(wordSearch("ab", ["ab", "abc", "zab"]));
 
 console.clear();
 
+function GeometricSequenceSum(a, r, n) {
+  let sum = 0;
+  let b = a;
+  for (let i = 1; i < n; i++) {
+    sum += b * r;
+    b = b * r;
+  }
+  return sum + a;
+}
+console.log(GeometricSequenceSum(2, 3, 5));
+
+// optimalus
+// const GeometricSequenceSum = (a, r, n) =>
+//   a * (r ** n - 1) / (r - 1) || a * n;
+
+console.clear();
+
+function spot(s1,s2){
+  let arr1 = s1.split('');
+  let arr2 = s2.split('');
+  let arr3 = [];
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      arr3.push(i);
+
+    }
+  }
+  return arr3;
+}
+console.log(spot("abcdefg", "abcqetg"));
+
+// optimalus
+// function spot(s1,s2){
+//   var final = [];
+//   for (var i = 0; i < s1.length; i++) {
+//     if (s1[i] !== s2[i]) final.push(i);
+//   }
+//   return final;
+// }
+
+console.clear();
+
+function squareDigits(num){
+  let arr = num.toString().split('');  
+  arr = arr.map((n) => n ** 2);
+  let str = parseFloat(arr.join(''));
+  
+  return str;
+}
+console.log(squareDigits(9119));
+
+// optimalus
+// function squareDigits(num){
+//   return Number(('' + num).split('').map(function (val) { return val * val;}).join(''));
+  
+// }
+
+console.clear();
+
+
+
+function d01(a,b){
+  let diff = a - b;
+    if(diff) {
+        return false;
+      }  else {
+        return true;
+      }
+}
+console.log(d01(0, 1));
+
+// optimalus
+// function d01(a,b){ return !(a^b) }
+
+console.clear();
+
+function smaller(nums) {
+  let count = 0;
+  let arr = [];
+
+  while (nums.length !== 0) {
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[0] > nums[i]) {
+      count++;
+    }    
+  }
+  
+  arr.push(count);
+  count = 0;
+  nums.shift();
+
+
+}
+
+return arr;
+
+
+  }
+  console.log(smaller([1, 2, 1]));
+
+
+  // optimalus
+  // const smaller = nums => nums.map((x, i) => nums.slice(i).filter(y => x > y).length);
+
+  console.clear();
+
+  function myParseInt(str) {
+    let arr = str.split('');
+    let count = 0;
+    let num = 0;
+    console.log(arr);
+    for (let i = 0; i < arr.length; i++) {
+      num = parseInt(arr[i]);     
+      if (isNaN(num)) {
+        count++;
+      }
+      if (arr[i] === ' ' || arr[i] === '\n' || arr[i] === '\t') {
+        count--
+      }
+    }
+
+    if (count > 0) {
+      return 'NaN';
+    } else {
+      return parseInt(str);
+    }
+
+    
+  }
+console.log(myParseInt("16.5"));  
+
+console.clear();
 
 
 
