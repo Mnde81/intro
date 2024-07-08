@@ -2977,6 +2977,157 @@ console.log(myParseInt("16.5"));
 
 console.clear();
 
+function getDivisorsCnt(n){
+  let count = 0;
+  for (let i = 1; i <=n; i ++) {
+    if (n % i === 0){
+      count++;
+    } 
+  }
+  return count;
+}
+console.log(getDivisorsCnt(30));
+
+console.clear();
+
+function showMe(yourID) {
+  if (yourID.includes('-') || !yourID.includes(' ') ) {
+    return true;
+  } else {
+    return false;
+  }  
+}
+console.log(showMe("Jean"));
+
+console.clear();
+
+function nbYear(p0, percent, aug, p) {
+  let count = 0;
+  while (p0 < p) {
+    p0 += p0 * percent / 100 + aug;
+    p0 = Math.floor(p0);
+    count++;
+  }
+  return count;
+}
+console.log(nbYear(1000, 2.0, 50, 1214));
+
+// optimalus
+// unction nbYear(p0, percent, aug, p) {
+    
+//   for (var years = 0; p0 < p; years++) {
+//     p0 = Math.floor(p0 + p0 * percent / 100 + aug);
+//   }
+//   return years
+// }
+
+console.clear();
+
+function testit(s) {
+  let countW = 0;
+  let countO = 0;
+  let countR = 0;
+  let countD = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (s[i].toLowerCase() === 'w') {
+      countW++;
+    }
+    if (s[i].toLowerCase() === 'o') {
+      countO++;
+    }
+    if (s[i].toLowerCase() === 'r') {
+      countR++;
+    }
+    if (s[i].toLowerCase() === 'd') {
+      countD++;
+    }
+    
+  }
+  let arr = [];
+  console.log(countW);
+  console.log(countO);
+  console.log(countR);
+  console.log(countD);
+  arr.push(countW);
+  arr.push(countO);
+  arr.push(countR);
+  arr.push(countD);
+  console.log(arr);
+  arr.sort((a, b) => a -b);
+  console.log(arr);
+
+  return arr[0]
+
+}
+console.log(testit("One word + one word = three word ;-)"));
+
+console.clear();
+
+function cookingTime(neededPower, minutes, seconds, power) {
+  let neededPowerNumber = parseInt(neededPower);
+  let powerNumber = parseInt(power);  
+  let powerRatio = neededPowerNumber / powerNumber;  
+  let s = minutes * 60 + seconds;
+ 
+  let cookingTimeSeconds = s * powerRatio;
+  
+  let min = Math.floor(cookingTimeSeconds / 60);
+  
+  let sec = Math.ceil(cookingTimeSeconds - min * 60); 
+  
+  if (sec === 60) {
+    sec = 0;
+    min =  min +1;
+  }
+
+  return `${min} minutes ${sec} seconds`;
+}
+console.log(cookingTime("600W", 4, 20, "800W"));
+
+// optimalus
+// function cookingTime(neededPower, minutes, seconds, power) {
+//   var time = Math.ceil((60 * minutes + seconds) * parseInt(neededPower) / parseInt(power));
+//   return `${Math.floor(time / 60)} minutes ${time % 60} seconds`;
+// }
+
+console.clear();
+
+function checkExam(array1, array2) {
+  let score = 0;
+   for (let i = 0; i < array1.length; i++) {
+    if (array1[i] === array2[i]) {
+      score = score + 4;
+    } else if (array2[i] === '') {
+      score = score + 0;
+    } else {
+      score = score - 1;
+    }
+   }
+
+   if (score < 0) {
+    return 0;
+   } else {
+    return score;
+   }
+  
+ }
+ console.log(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]));
+
+ console.clear();
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
