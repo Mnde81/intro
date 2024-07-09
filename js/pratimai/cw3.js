@@ -3116,7 +3116,70 @@ function checkExam(array1, array2) {
  console.clear();
 
 
- 
+ function divisibleByLast(n) {
+   let str = n.toString();
+   let bool = false;
+   let arr = [false];
+   for (let i = 1; i < str.length; i++) {
+    if (parseFloat(str[i]) % parseFloat(str[i - 1]) === 0) {
+      bool = true;       
+    } else {
+      bool = false;      
+    }
+    arr.push(bool);
+   } 
+   return arr;
+}
+console.log(divisibleByLast(2026));
+
+// optimalus
+// const divisibleByLast = n => {
+//   return n.toString().split('').map((el, ind, arr) => el % arr[ind - 1] === 0);
+// }
+
+console.clear();
+
+function appleBoxes(k) {
+  let yellow = 0;
+  let red = 0;
+  
+  for (let i = 1; i <= k; i++){
+     if (i % 2 !== 0) {
+      yellow += i * i;
+     } else {
+      red += i * i;
+     }
+  }
+  return red - yellow;
+}
+console.log(appleBoxes(5));
+
+console.clear();
+
+function candles(candlesNumber, makeNew) {
+  let leftowers = candlesNumber;
+  let newCandles = 0; 
+  let leftowers2 = 0;
+  let total = candlesNumber;
+  while (leftowers >= makeNew) {
+    newCandles = Math.floor(leftowers / makeNew);
+    leftowers2 = leftowers - newCandles * makeNew;
+    leftowers = leftowers2 + newCandles;
+    total += newCandles;
+  }
+  return total; 
+  
+}
+console.log(candles(5, 2));
+
+
+// optimalus
+// const candles = (candlesNumber, makeNew) =>
+//   candlesNumber + --candlesNumber / --makeNew ^ 0;
+
+
+console.clear();
+
 
 
 
