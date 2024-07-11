@@ -3180,7 +3180,312 @@ console.log(candles(5, 2));
 
 console.clear();
 
+function countRedBeads(n) {
+  if (n < 2) { 
+    return 0;
+  }
+  let red = (n -1) * 2;
+  return red;
+}
+console.log(countRedBeads(3));
 
+console.clear();
+
+
+// function encode(str){
+//   for (let i = 0; i < str.length; i++){
+//     // if (str[i] === 'A') {
+//     //   str = str.replace('A', 'G');
+    
+//     // } 
+//     // if (str[i] === 'G') {
+//     //   str = str.replace('G', 'A');
+      
+//     // } 
+//     if (str[i] === 'a') {
+//       str = str.replace('a', 'g');
+//       continue
+     
+//     } 
+//     if (str[i] === 'g') {
+//      str = str.replace('g', 'a');
+//      continue
+      
+//     }
+//     // } else
+//     // if (str[i] === 'E') {
+//     //   str = str.replace('E', 'D');
+     
+//     // } else
+//     // if (str[i] === 'e') {
+//     //   str = str.replace('e', 'd');
+      
+//     // } else
+//     // if (str[i] === 'D') {
+//     //   str = str.replace('D', 'E');
+//     //      } else
+//     // if (str[i] === 'd') {
+//     //   str = str.replace('d', 'e');
+      
+//     // } else
+//     // if (str[i] === 'Y') {
+//     //   str = str.replace('Y', 'R');
+      
+//     // } else
+//     // if (str[i] === 'y') {
+//     //   str = str.replace('y', 'r');
+      
+//     // } else
+//     // if (str[i] === 'R') {
+//     //   str = str.replace('R', 'Y');
+    
+//     // } else
+//     // if (str[i] === 'r') {
+//     //   str= str.replace('r', 'y');
+      
+//     // } else
+//     // if (str[i] === 'O') {
+//     //   str = str.replace('O', 'P');
+     
+//     // } else
+//     // if (str[i] === 'o') {
+//     //   str = str.replace('o', 'p');
+      
+//     // } else
+//     // if (str[i] === 'P') {
+//     //   str = str.replace('P', 'O');
+     
+//     // } else
+//     // if (str[i] === 'p') {
+//     //   str = str.replace('p', 'o');
+      
+//     // } else
+//     // if (str[i] === 'U') {
+//     //   str = str.replace('U', 'L');
+      
+//     // } else
+//     // if (str[i] === 'u') {
+//     //   str = str.replace('u', 'l');
+      
+//     // } else
+//     // if (str[i] === 'L') {
+//     //   str = str.replace('L', 'U');
+      
+//     // } else
+//     // if (str[i] === 'l') {
+//     //   str = str.replace('l', 'u');
+      
+//     // } else
+//     // if (str[i] === 'I') {
+//     //   str = str.replace('I', 'K');
+      
+//     // } else
+//     // if (str[i] === 'i') {
+//     //   str = str.replace('i', 'k');
+      
+//     // } else
+//     // if (str[i] === 'K') {
+//     //   str = str.replace('K', 'I');
+      
+//     // } else
+//     // if (str[i] === 'k') {
+//     //   str = str.replace('k', 'i');
+      
+//     // }
+
+//   }
+//       return str;   
+// }
+// console.log(encode("ga"));
+
+// //  "GA-DE-RY-PO-LU-KI"
+
+// function decode(str) {
+//   for (let i = 0; i < str.length; i++){
+//     if (str[i] === 'A') {
+//       str = str.replace('A', 'G');
+//       continue;
+//     }
+//     if (str[i] === 'G') {
+//       str = str.replace('G', 'A');
+//       continue;
+//     }
+//     if (str[i] === 'a') {
+//       str = str.replace('a', 'g');
+//       continue;
+//     }
+//     if (str[i] === 'g') {
+//       str = str.replace('g', 'a');
+//       continue;
+//     }
+//     if (str[i] === 'E') {
+//       str = str.replace('E', 'D');
+//       continue;
+//     }
+//     if (str[i] === 'e') {
+//       str = str.replace('e', 'd');
+//       continue;
+//     }
+//     if (str[i] === 'D') {
+//       str = str.replace('D', 'E');
+//       continue;
+//     }
+//     if (str[i] === 'd') {
+//       str = str.replace('d', 'e');
+//       continue;
+//     }
+//     if (str[i] === 'Y') {
+//       str = str.replace('Y', 'R');
+//       continue;
+//     }
+//     if (str[i] === 'y') {
+//       str = str.replace('y', 'r');
+//       continue;
+//     }
+//     if (str[i] === 'R') {
+//       str = str.replace('R', 'Y');
+//       continue;
+//     }
+//     if (str[i] === 'r') {
+//       str = str.replace('r', 'y');
+//       continue;
+//     }
+//     if (str[i] === 'O') {
+//       str = str.replace('O', 'P');
+//       continue;
+//     }
+//     if (str[i] === 'o') {
+//       str = str.replace('o', 'p');
+//       continue;
+//     }
+//     if (str[i] === 'P') {
+//       str = str.replace('P', 'O');
+//       continue;
+//     }
+//     if (str[i] === 'p') {
+//       str = str.replace('p', 'o');
+//       continue;
+//     }
+//     if (str[i] === 'U') {
+//       str = str.replace('U', 'L');
+//       continue;
+//     }
+//     if (str[i] === 'u') {
+//       str = str.replace('u', 'l');
+//       continue;
+//     }
+//     if (str[i] === 'L') {
+//       str = str.replace('L', 'U');
+//       continue;
+//     }
+//     if (str[i] === 'l') {
+//       str = str.replace('l', 'u');
+//       continue;
+//     }
+//     if (str[i] === 'I') {
+//       str = str.replace('I', 'K');
+//       continue;
+//     }
+//     if (str[i] === 'i') {
+//       str = str.replace('i', 'k');
+//       continue;
+//     }
+//     if (str[i] === 'K') {
+//       str = str.replace('K', 'I');
+//       continue;
+//     }
+//     if (str[i] === 'k') {
+//       str = str.replace('k', 'i');
+//       continue;
+//     }
+
+//   }
+ 
+
+
+//     return str;   
+// }
+
+// console.log(decode("Gug hgs g cgt"));
+
+
+
+console.clear();
+
+
+function celsiusToRomer(temp) {
+  let romer = (temp * 21 / 40) + 7.5;
+  return romer;
+}
+console.log(celsiusToRomer(24));
+
+console.clear();
+
+
+
+function sortGiftCode(code){
+  let arr = code.split('');
+  console.log(arr);
+  arr = arr.sort();
+    let sorted = arr.join('');
+
+  return sorted;
+}
+console.log(sortGiftCode("pqksuvy"));
+
+// optimalus
+// function sortGiftCode(code){
+//   return code.split('').sort().join('');
+// }
+
+
+console.clear();
+
+
+function reverseSlice(str) {
+  let rev = str.split('').reverse().join('');
+   let arr = [];
+   arr.push(rev);   
+   let str2= '';
+    for (let i = 0; i < str.length; i++) {
+      str2 = rev.slice(1);
+      arr.push(str2)
+      rev = str2;
+    }
+    arr.pop();
+  return arr;
+}
+console.log(reverseSlice('abcde'));
+
+// optimalus
+// function reverseSlice(str) {
+//   var rev = str.split('').reverse().join('');;
+//   var result = [];
+//   for(var i=0;i<str.length;i++)
+//   {
+//     result.push(rev.slice(i));
+//   }
+//   return result;
+// }
+
+console.clear();
+
+function findMissing(arr1, arr2) {
+   arr1 = arr1.sort();
+   arr2 = arr2.sort();
+   let arr3 = [];
+
+   for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      arr3.push(arr1[i]);
+    }
+   }
+  
+  return arr3[0]
+}
+console.log(findMissing([1, 2, 2, 3], [1, 2, 3]));
+
+console.clear();
 
 
 
