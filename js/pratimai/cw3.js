@@ -3489,13 +3489,164 @@ console.clear();
 
 
 
+function diff(a, b){
+  let c = [];
+  let d = [];
+  for (let i = 0; i < a.length; i++) {
+    if (!b.includes(a[i])) {
+      c.push(a[i]);
+    }
+  }
+  for (let i = 0; i < b.length; i++) {
+    if (!a.includes(b[i])) {
+      c.push(b[i]);
+    }
+  }
+  for (let i = 0; i < c.length; i++) {
+    if (!d.includes(c[i])) {
+      d.push(c[i]);
+    }
+  }
+  d = d.sort();
+  return d;
+}
+console.log(diff(['a', 'a', 't', 'e', 'f', 'i', 'j'], ['t', 'g', 'g', 'i', 'k', 'f']));
+
+// optimalus
+// const diff = (a, b) =>
+//   [...new Set([...a, ...b].filter(val => a.includes(val) ^ b.includes(val)))].sort();
+
+console.clear();
+
+
+function evenNumbers(array, number) {
+  let arr = [];
+  let arr2 = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 == 0)
+      arr.push(array[i]);
+  }
+
+  if (arr.length < number) {
+    return arr;
+  } else {
+    for (let i = 0; i < number; i++ ) {
+      arr2.push(arr[arr.length - 1 -i])
+    }
+    arr2 = arr2.reverse();
+    return arr2;
+
+
+  }
+  
+}
+console.log(evenNumbers([-49,-93,-3,-79,-84,89,88,-35,-27,-72], 6));
+
+// optimalus
+// const evenNumbers = (array, number) => array.filter(item => item % 2 === 0).slice(-number);
 
 
 
+console.clear();
+
+function digitize(n) {
+  let str = n.toString();
+  str = str.split('');
+  str = str.map(a => parseInt(a))
+  return str;
+
+}
+console.log(digitize(8675309));
+
+// optimalus
+// function digitize(n) {
+//   return String(n).split('').map(Number);
+// }
+
+console.clear();
+
+// function fraction(a, b) {
+//   let x = 0;
+//   if (a === b) {
+//     return a/b*2;
+//   }
+
+//   x = a / b;
+
+//   function toFraction(x, tolerance) {
+//     if (x == 0) return [0, 1];
+//     if (x < 0) x = -x;
+//     if (!tolerance) tolerance = 0.0001;
+//     var num = 1, den = 1;
+  
+//     function iterate() {
+//         var R = num/den;
+//         if (Math.abs((R-x)/x) < tolerance) return;
+  
+//         if (R < x) num++;
+//         else den++;
+//         iterate();
+//     }
+  
+//     iterate();
+//     return num + den;
+//   }
+
+//    return toFraction(x, 0.0001)
+  
+// }
+// console.log(fraction(90, 120));
 
 
+console.clear();
+
+function getNumberOfSquares(n) {
+  let sq = 0;
+  let arr = [];
+   for (let i = 1; i <= n; i++) {
+    sq = i**2;
+    arr.push(sq);
+   }
+   console.log(arr);
+   let sum = 0;
+   let count = 0;
+   while (sum < n) {
+    sum = sum + arr[count]
+    count++
+   }
+
+   return count -1;
+}
+console.log(getNumberOfSquares(15));
+
+// optimalus
+// function getNumberOfSquares(n) {
+//   let out = 0, result = 0
+//   while ( n > result + (out + 1 )**2){
+//     out++
+//     result += out**2
+//   }
+//   return out
+// }
+
+console.clear();
 
 
+function convertHashToArray(hash){
+  let a = []; 
+  
+  for(o in hash) 
+  a.push([String(o), hash[o]]);  
+  a.sort();
+  return a;
+}
 
+console.log(convertHashToArray({name: 'Jeremy', age: 24, role: 'Software Engineer'}));
+
+
+// optimalus
+// const convertHashToArray = o => Object.entries(o).sort();
+
+console.clear();
 
 
