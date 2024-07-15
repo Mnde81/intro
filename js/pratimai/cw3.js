@@ -3650,3 +3650,155 @@ console.log(convertHashToArray({name: 'Jeremy', age: 24, role: 'Software Enginee
 console.clear();
 
 
+function getLargerNumbers(a, b) {
+  let c = [];
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] >= b[i]) {
+      c.push(a[i]);
+    } else {
+      c.push(b[i]);
+    }
+  }
+  return c;
+}
+console.log(getLargerNumbers([13, 64, 15, 17, 88], [23, 14, 53, 17, 80]));
+
+// optimalus
+// function getLargerNumbers(a, b) {
+
+//   var newArray = [];
+  
+//   for ( i=0; i<a.length; i++) {
+//     newArray.push( Math.max( a[i], b[i] ) );
+//   }
+  
+//   return newArray;
+// }
+
+console.clear();
+
+
+function reverseLetter(str) {
+  str = str.replace(/\W/ig, "");
+  str = str.replace(/\d+/g, '');
+  str = str.replaceAll('_', '');
+  
+  let rev = str.split('').reverse().join('');
+
+ return rev; 
+  
+}
+console.log(reverseLetter("ultr53o?n"));
+
+// optimalus
+// reverseLetter=(s)=>s.replace(/[^a-z]/gi,'').split('').reverse().join('');
+
+console.clear();
+
+function minMax(arr){
+  let min = arr[0];
+  let max = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+     if (arr[i] > max) {
+      max = arr[i];
+     } else if (arr[i] < min) {
+      min = arr[i];
+     }
+  }
+
+  return [min, max];
+
+}
+console.log(minMax([1,2,3,4,5]));
+
+// optimalus
+// function minMax(arr){
+//   return [Math.min(...arr), Math.max(...arr)];
+// }
+
+console.clear();
+
+function getSum(a, b){
+  let arr = [];
+  arr.push(a);
+  arr.push(b);
+  arr.sort((a, b) => a-b);
+  console.log(arr);
+  let sum = 0;
+  
+  if (arr[0] < 0 && arr[1] < 0) {
+    for (let i = arr[0]; i <= arr[1]; i++) {
+      sum += i;
+    }
+  } else {
+    for (let i = arr[0]; i <= arr[1]; i++) {
+      sum += i;
+    }
+
+  }
+ 
+  return sum;
+}
+console.log(getSum(-1, -5));
+
+// optimalus
+// const GetSum = (a, b) => {
+//   let min = Math.min(a, b),
+//       max = Math.max(a, b);
+//   return (max - min + 1) * (min + max) / 2;
+// }
+
+console.clear();
+
+
+
+function findShort(s){
+  let arr = s.split(' ');
+ 
+  let shortest = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length < shortest.length) {
+      shortest = arr[i];
+    }
+  }
+  return shortest.length;
+}
+console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
+
+// optimalus
+// function findShort(s){
+//   return Math.min(...s.split(" ").map (s => s.length));
+// }
+
+console.clear();
+
+function sumOfMinimums(arr) {
+  let sum = 0;
+  
+  for (let i = 0; i < arr.length; i++) {
+    
+    let arr2 = arr[i];
+    let min = arr2[0];
+    
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr2[j] < min) {
+        min = arr2[j];
+      }
+      
+    }
+    
+    
+    sum +=min;
+  }
+  return sum;
+}
+console.log(sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]));
+
+// optimalus
+// function sumOfMinimums(arr) {
+//   return arr.reduce((p, c) => p + Math.min(...c), 0);
+// }
+
+console.clear();
+
+
