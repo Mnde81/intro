@@ -3802,3 +3802,138 @@ console.log(sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]));
 console.clear();
 
 
+function add(arr) {
+  let sum = 0;
+  let arr2 = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j <= arr[i]; j++) {
+      sum += j;
+    }
+    arr2.push(sum);
+    sum = 0;
+  }
+  return arr2;
+}
+console.log(add([2, 4, 6, 8, 10]));
+
+console.clear();
+
+function middleMe(N, X, Y){
+  if (N % 2 !== 0) {
+    return X;
+  }
+  let mid = N / 2;
+  let ans = '';
+  
+  for (let i = 0; i < mid; i++) {
+    ans = ans + Y;
+  }
+
+  
+
+  return `${ans}${X}${ans}`
+  
+}
+console.log(middleMe(10, 'A', '*'));
+
+// optimalus
+// var middleMe = function (N, X, Y) {
+//   var s = Y.repeat(N/2);
+  
+//   return N % 2 ? X : s + X + s;
+// }
+
+console.clear();
+
+
+
+function giveChange(amount) {
+  let hundred = Math.floor(amount / 100); 
+  amount = amount - hundred *100; 
+  let fifty = Math.floor(amount / 50); 
+  amount = amount - fifty * 50;  
+  let twenty = Math.floor(amount / 20); 
+  amount = amount - twenty * 20;
+  let ten = Math.floor(amount / 10);
+  amount = amount - ten * 10;
+  let five = Math.floor(amount / 5);
+  amount = amount - five * 5;
+  let one = Math.floor(amount / 1);
+  amount = amount - one * 1;
+  let arr = [];
+  arr.push(one);
+  arr.push(five);
+  arr.push(ten);
+  arr.push(twenty);
+  arr.push(fifty);
+  arr.push(hundred);
+  
+  return arr;
+}
+console.log(giveChange(217));
+
+console.clear();
+
+
+var AmIAfraid = function(day, num){
+  if (day === 'Monday') {
+    return num === 12;
+  }
+  if (day === 'Tuesday') {
+    return num > 95;
+  }
+  if (day === 'Wednesday') {
+    return num === 34;
+  }
+  if (day === 'Thursday') {
+    return num === 0;
+  }
+  if (day === 'Friday') {
+    return num % 2 === 0;
+  }
+  if (day === 'Saturday') {
+    return num === 56;
+  }
+  if (day === 'Sunday') {
+    return num === 666 || num === -666;
+  }
+
+}
+console.log(AmIAfraid("Sunday", 56));
+
+// optimalus
+// var AmIAfraid = function(day, num) {
+//   var preds = {"Sunday":    d => d == 666 || d == -666,
+//                "Monday":    d => d == 12,
+//                "Tuesday":   d => d > 95,
+//                "Wednesday": d => d == 34,
+//                "Thursday":  d => d === 0,
+//                "Friday":    d => d % 2 === 0,
+//                "Saturday":  d => d == 56};
+//   return preds[day](num);
+// }
+
+console.clear();
+
+
+function doubleEveryOther(a) {
+  let double = 0;
+  let arr = [];
+  for (let i = 0; i < a.length; i++)
+    if (i % 2 !== 0) {
+      double = a[i] * 2;
+      arr.push(double);
+    } else {
+      arr.push(a[i]);
+    }
+  return arr;
+}
+console.log(doubleEveryOther([1,2,3,4]));
+
+// optimalus
+// const doubleEveryOther = (a) => a.map((c,i) => i % 2 == 0 ? c : 2 * c);
+
+console.clear();
+
+
+
