@@ -3936,4 +3936,63 @@ console.log(doubleEveryOther([1,2,3,4]));
 console.clear();
 
 
+function sumOrProduct(array, n) {
+   array.sort((a, b) => b - a);   
+   let sum = 0;
+   for (let i = 0; i < n; i++) {
+    sum += array[i];
+   }   
+   array.sort((a, b) => a - b);   
+   let product = 1;
+   for (let i = 0; i < n; i++) {
+    product = product * array[i];
+   }
+   if (sum > product) {
+    return 'sum';
+   }
+   if (sum < product) {
+    return 'product';
+   }
+   if (sum === product) {
+    return 'same';
+   }
+
+}
+
+console.log(sumOrProduct([10, 41, 8, 16, 20, 36, 9, 13, 20], 3));
+
+// optimalus
+// const sumOrProduct = (arr, n) => {
+//   const sorted = arr.sort((a, b) => a - b);
+//   const sum = sorted.slice(-n).reduce((acc, i) => acc + i);
+//   const product = sorted.slice(0, n).reduce((acc, i) => acc * i, 1);
+//   return sum > product ? 'sum' : sum < product ? 'product' : 'same';
+// }
+
+console.clear();
+
+function fourPiles(n,y){
+  let x = 0;
+  while (((x+y) + (x-y) + (x*y) + (x/y)) < n) {
+    x++;
+  }
+  console.log(x);
+  if (((x+y) + (x-y) + (x*y) + (x/y)) !== n) {
+    return [];
+  }
+  if ((x -y) === 0) {
+    return [];
+  }
+  return [(x+y), (x-y), (x*y), (x/y)];  
+}
+console.log(fourPiles(48, 3));
+
+// optimalus
+// function fourPiles(n,y){
+//   x = n*y/((2+y)*y+1)
+// 	if(x%1!=0 || x-y==0) return []
+// 	return [x+y,x-y,x*y,x/y]
+// }
+
+console.clear();
 
