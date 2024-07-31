@@ -3996,3 +3996,68 @@ console.log(fourPiles(48, 3));
 
 console.clear();
 
+function betweenExtremes(numbers) {
+  let max = Math.max(...numbers);
+  let min = Math.min(...numbers);
+  return max - min;
+}
+console.log(betweenExtremes([23, 3, 19, 21, 16]));
+
+console.clear();
+
+
+function fizzBuzzCuckooClock(time) {
+  let arr = time.split(':');
+  
+  let min = parseInt(arr[1]);
+  let hour = parseInt(arr[0]);
+  let times = 0;
+
+  if (hour >= 12) {
+    times = hour -12;
+  } else {
+    times = hour;
+  }
+  
+  if (min === 30) {
+    return "Cuckoo";
+  }
+
+  if (min === 0 && times === 0) {
+    return ("Cuckoo ").repeat(12).trimEnd();
+  }
+
+  if (min === 0 && times !== 0) {
+    return ("Cuckoo ").repeat(times).trimEnd();
+  }
+
+  if (min % 3 === 0 && min % 5 === 0) {
+    return 'Fizz Buzz';
+  }
+  if (min % 3 === 0) {
+    return 'Fizz';
+  }
+
+  if (min % 5 === 0) {
+    return 'Buzz';
+  }
+
+  return 'tick';
+
+}
+console.log(fizzBuzzCuckooClock("21:00"));
+
+// optimalus
+// function fizzBuzzCuckooClock(time) {
+//   let [hour, minute] = time.split(':');
+//   return minute ==  0 ? "Cuckoo ".repeat(hour % 12 || 12).trim() :
+//     minute      == 30 ? "Cuckoo" : 
+//     minute % 15 ==  0 ? "Fizz Buzz" :
+//     minute % 3  ==  0 ? "Fizz" :
+//     minute % 5  ==  0 ? "Buzz" : 
+//                         "tick";
+// }
+
+console.clear();
+
+
