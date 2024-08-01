@@ -4061,3 +4061,174 @@ console.log(fizzBuzzCuckooClock("21:00"));
 console.clear();
 
 
+function divisors(integer) {
+  let arr = [];
+  for (let i = 2; i < integer; i++) {
+    if (integer % i === 0) {
+      arr.push(i);
+    }
+  }
+  if (arr.length === 0) {
+    return `${integer} is prime`;
+  } else {
+    return arr;
+  }
+  
+}
+console.log(divisors(13));
+
+console.clear();
+
+
+function findNextSquare(sq) {
+  let ans = Math.sqrt(sq);
+  let next = sq + 1;
+  if (ans % 1 !== 0) {
+    return -1;
+  } else {
+    while (Math.sqrt(next) % 1 !== 0) {
+      next++;
+    }
+    return next;
+  }  
+}
+console.log(findNextSquare(121));
+
+// optimalus
+// function findNextSquare(sq) {
+//   return Math.sqrt(sq)%1? -1 : Math.pow(Math.sqrt(sq)+1,2);
+// }
+
+console.clear();
+
+function openOrSenior(data){
+  let arr = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i][0] >= 55 && data[i][1] > 7) {
+      arr.push('Senior');
+    } else {
+      arr.push('Open');
+    }
+      
+  }
+  return arr;
+}
+console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]));
+
+
+// optimalus
+// function openOrSenior(data){
+//   return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
+// }
+
+console.clear();
+
+
+function friend(friends){
+  let arr = [];
+  for (let i = 0; i < friends.length; i++) {
+    if (friends[i].length === 4) {
+      arr.push(friends[i]);
+    }
+  }
+  if (arr.length === 0) {
+    return [];
+  } else {
+    return arr;
+  }
+}
+console.log(friend(["Ryan", "Kieran", "Jason", "Yous"]));
+
+// optimalus
+// function friend(friends){
+//   return friends.filter(n => n.length === 4)
+// }
+
+console.clear();
+
+
+function sumTwoSmallestNumbers(numbers) {  
+  let arr = numbers.sort((a, b) => a - b);
+  return arr[0] + arr[1];
+}
+console.log(sumTwoSmallestNumbers([10, 343445353, 3453445, 3453545353453]));
+
+console.clear();
+
+function filter_list(l) {
+  let arr = l.filter(n => typeof n === 'number');
+  return arr;
+}
+console.log(filter_list([1,2,'aasf','1','123',123]));
+
+console.clear();
+
+
+function checkThreeAndTwo(array) {
+  let sumA = 0;
+  let sumB = 0;
+  let sumC = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === 'a') {
+      sumA++;
+    }
+    if (array[i] === 'b') {
+      sumB++;
+    }
+    if (array[i] === 'c') {
+      sumC++;
+    }
+  }
+  if (sumA === 3 && sumB === 2) {
+    return true;
+  } 
+  if (sumA === 3 && sumC === 2) {
+    return true;
+  } 
+
+  if (sumB === 3 && sumA === 2) {
+    return true;
+  } 
+  if (sumB === 3 && sumC === 2) {
+    return true;
+  }
+
+  if (sumC === 3 && sumA === 2) {
+    return true;
+  }
+
+  if (sumC === 3 && sumB === 2) {
+    return true;
+  }
+
+  return false;
+
+}
+console.log(checkThreeAndTwo(["a", "b", "c", "b", "c"] ));
+
+
+// optimalus
+// function checkThreeAndTwo(array) {
+//   const counts = array.reduce((result, letter) => {
+//     if (result[letter]) {
+//       result[letter]++;
+//     } else {
+//       result[letter] = 1;
+//     }
+    
+//     return result;
+//   }, {});
+  
+//   const containsThree = Object.values(counts).some(x => x === 3);
+//   const containsTwo = Object.values(counts).some(x => x === 2);
+  
+//   return containsThree && containsTwo;
+// }
+
+console.clear();
+
+
+
+
+
+
