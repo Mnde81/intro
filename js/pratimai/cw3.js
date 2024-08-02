@@ -4228,7 +4228,104 @@ console.log(checkThreeAndTwo(["a", "b", "c", "b", "c"] ));
 console.clear();
 
 
+function getMissingElement(superImportantArray){
+  let arr = superImportantArray.sort((a, b) => a - b);
+  let missing = 0;
+  for (let i = 0; i <= 9; i++) {
+    if (arr[i] !== i) {
+      missing = i;
+      break;
+    }
+  }
+  return missing;
+}
+console.log(getMissingElement([9, 2, 4, 5, 7, 0, 8, 6, 1]));
+
+// optimalus
+// function getMissingElement(superImportantArray){
+//   for (i = 0; i < 10; i++) {
+//     if (superImportantArray.indexOf(i) === -1) return i;
+//   }
+// }
+
+console.clear();
 
 
+function XO(str) {
+  let string = str.toLowerCase();
+  let countX = 0;
+  let countO = 0;
+
+  for (let i = 0; i < string.length; i++) {
+    if ( string[i] === 'x') {
+      countX++;
+    }
+    if ( string[i] === 'o') {
+      countO++;
+    }
+  }
+
+  if (countX === 0 && countO === 0) {
+    return true;
+  } 
+  if (countX === countO) {
+    return true;
+  }
+
+  return false;
+}
+console.log(XO("ooxx"));
+
+// optimalus
+// function XO(str) {
+//   let x = str.match(/x/gi);
+//   let o = str.match(/o/gi);
+//   return (x && x.length) === (o && o.length);
+// }
+
+console.clear();
+
+function evenLast(numbers) {
+  if (numbers.length ===  0) {
+    return 0;
+  }  
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    if (i % 2 === 0) {
+      sum += numbers[i];
+
+    }
+  }
+  let last = numbers.pop();  
+  return sum * last;
+
+}
+console.log(evenLast([2, 3, 4, 5]));
+
+console.clear();
 
 
+function getMiddle(s){
+  let indexOdd = 0;
+  let indexEven = 0;
+  if (s.length % 2 !== 0) {
+  indexOdd = Math.ceil(s.length / 2);
+  console.log(indexOdd);
+  return s.charAt(indexOdd-1);
+  }
+
+  if (s.length % 2 === 0) {
+    indexEven = Math.ceil(s.length / 2);
+    console.log(indexEven);
+    return `${s.charAt(indexEven-1)}${s.charAt(indexEven)}`;
+    }
+}
+console.log(getMiddle("test"));
+
+// optimalus
+// function getMiddle(s)
+// {
+//   return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+// }
+
+console.clear();
