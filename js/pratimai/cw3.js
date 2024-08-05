@@ -4329,3 +4329,123 @@ console.log(getMiddle("test"));
 // }
 
 console.clear();
+
+function highAndLow(numbers){
+  let arr = numbers.split(' ');  
+  let sorted = arr.sort((a, b) => a- b);
+
+  return `${sorted.at(-1)} ${sorted[0]}`;   
+}
+console.log(highAndLow("1 2 -3 4 5"));
+
+// optimalus
+// function highAndLow(numbers){
+//   numbers = numbers.split(' ');
+//   return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+// }
+
+console.clear();
+
+function descendingOrder(n){
+  let arr = n.toString().split('');
+  let sorted = arr.sort((a, b) => b - a);  
+  let joined = sorted.join('');
+
+  return parseFloat(joined);
+}
+console.log(descendingOrder(145263));
+
+// optimalus
+// function descendingOrder(n){
+//   return parseInt(String(n).split('').sort().reverse().join(''))
+// }
+
+console.clear();
+
+function sexyPrime(x, y){
+  if (x === 1 || y === 1) {
+    return false;
+  }
+  
+  function isPrime(num) {
+    var sqrtnum=Math.floor(Math.sqrt(num));
+      var prime = num != 1;
+      for(var i=2; i<sqrtnum+1; i++) { // sqrtnum+1
+          if(num % i == 0) {
+              prime = false;
+              break;
+          }
+      }
+      return prime;
+  }
+
+  if (isPrime(x) === false || isPrime(y) === false) {
+    return false;
+  }
+
+
+  let abs = Math.abs(x-y)
+
+  if (abs === 6) {
+    return true;
+  } else {
+    return false;
+  }
+  
+  
+}
+console.log(sexyPrime(61, 67));
+
+console.clear();
+
+function longestWord(stringOfWords) {
+  let arr = stringOfWords.split(' ');  
+  let longest = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length >= longest.length) {
+      longest = arr[i];
+    }
+  }
+
+  return longest;
+  
+}
+console.log(longestWord("red blue gold"));
+
+// optimalus
+// let longestWord = s => s.split(' ').reduceRight((a,b)=>(b.length>a.length) ? b : a);
+
+console.clear();
+
+function frogContest(n) {
+  let chris = 0;
+  for (let i = 0; i <= n; i++) {
+    chris += i;
+  }
+  let tomR = Math.floor(chris / 2);
+  let tom = 0;
+
+  for (let i = 0; i <= tomR; i++) {
+    tom += i;
+  }
+  let catR = tom + chris; 
+
+  let cat = 0;
+
+  for (let i = 0; i <= catR; i++) {
+    cat += i;
+  }
+  return `Chris ate ${chris} flies, Tom ate ${tom} flies and Cat ate ${cat} flies`;
+  
+}
+console.log(frogContest(6));
+
+
+console.clear();
+
+
+
+
+
+
+
