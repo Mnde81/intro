@@ -4444,6 +4444,120 @@ console.log(frogContest(6));
 console.clear();
 
 
+function missingNo(nums) {
+  let missing = 0;
+  for (let i = 0; i <= 100; i++) {
+    if (!nums.includes(i)) {
+      missing = i;
+    }
+  }
+  return missing;
+}
+console.log(missingNo([9, 45, 53, 10, 100, 30, 85, 72, 69, 93, 98, 27, 73, 82, 91, 60, 5, 79, 88, 18, 71, 36, 44, 22, 89, 40, 59, 80, 81, 67, 25, 54, 13, 64, 56, 39, 48, 92, 84, 94, 87, 90, 77, 63, 32, 68, 37, 96, 23, 0, 95, 1, 52, 78, 6, 57, 50, 2, 46, 19, 76, 47, 14, 4, 3, 29, 17, 11, 21, 24, 74, 65, 12, 83, 28, 41, 66, 7, 58, 55, 51, 43, 97, 42, 86, 49, 31, 20, 75, 70, 34, 33, 38, 8, 15, 62, 35, 61, 99, 16]));
+
+
+console.clear();
+
+function sentencify(words) {  
+  let sentence = words.join(' ');
+  sentence = sentence.replace(sentence[0], sentence[0].toUpperCase());
+  return `${sentence}.`;
+
+  
+}
+console.log(sentencify(["this","is","a","sentence"]));
+
+
+console.clear();
+
+function isAllPossibilities(x){
+  let arr = [];
+  for (let i = 0; i < x.length; i++) {
+    if (!x.includes(i)) {
+      arr.push(i);
+    }
+  }
+  if (arr.length > 0) {
+    return false;
+  } else {
+    return true;
+  }
+  
+}
+console.log(isAllPossibilities([1,2,0,3]));
+
+console.clear();
+
+const intDiff = (arr, n) => {
+  let count = 0;
+   for (let i = 0; i < arr.length; i++) {
+    let num = arr[i] + n;
+      for (let j = 0; j < arr.length; j++) {
+        if (arr[j] === num) {
+          count++;
+        }
+      }
+   }
+   let arr2 = [];
+   if (n === 0) {    
+    for (let i =0; i < arr.length; i++) {
+      if (!arr2.includes(arr[i])) {
+        arr2.push(arr[i])
+      }
+    }
+    return arr2.length;
+   }
+   
+   return count;
+}
+console.log(intDiff([1, 1, 3, 3], 0));
+
+console.clear();
+
+function firstReverseTry(arr) {
+
+  if (arr.length === 0) {
+    return [];
+  }
+
+  if (arr.length === 1) {
+    return arr;
+  }
+  let last = arr.pop();  
+  let first = arr.shift();  
+  arr.unshift(last);
+  arr.push(first);
+
+  return arr;  
+}
+console.log(firstReverseTry([1, 2, 3, 4, 5]));
+
+console.clear();
+
+function missingWord(nums, str) {
+  nums.sort((a, b) => a -b);  
+  let string = str.replaceAll(' ', '');
+  let arr = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] > string.length) {
+      return "No mission today";
+    } else {
+      arr.push(string.charAt(nums[i]));
+
+    }
+    
+  }
+  return arr.join('').toLowerCase();   
+}
+console.log(missingWord([5, 0, 3], "I Love You"));
+
+console.clear();
+
+
+
+
+
+
 
 
 
