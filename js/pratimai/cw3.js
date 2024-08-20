@@ -4555,6 +4555,68 @@ console.clear();
 
 
 
+function getMinMax(arr){
+  let min = Math.min(...arr)
+  let max = Math.max(...arr)
+  return [min, max]
+};
+console.log(getMinMax([1, 2]));
+
+console.clear();
+
+
+
+function pak(s){
+
+  if (s.trim() === '') {
+    return '';
+  }
+  let str = '';
+  let arr = s.split(' ');
+  for (let i = 0; i < arr.length; i++) {
+    str += arr[i] + ' pak '
+
+  }
+  let arr2 = str.split(' ');
+  arr2.pop();
+  arr2.pop();
+  
+  return arr2.join(' ');
+
+}
+console.log(pak('Man I need a taxi up to Ubud'));
+
+console.clear();
+
+
+const sumSquareEvenRootOdd = ns => {
+  let arr = [];
+  for (let i = 0; i < ns.length; i++) {
+    if (ns[i] % 2 === 0) {
+      arr.push(ns[i] * ns[i]);
+    } else {
+      arr.push(Math.sqrt(ns[i]));
+    }
+  }
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]
+  }
+  
+  return Math.round(sum * 100) / 100;
+
+  
+};
+console.log(sumSquareEvenRootOdd([4,5,7,8,1,2,3,0]));
+
+
+
+console.clear();
+
+
+
+
+
 
 
 
