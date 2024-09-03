@@ -4614,6 +4614,68 @@ console.log(sumSquareEvenRootOdd([4,5,7,8,1,2,3,0]));
 console.clear();
 
 
+function removeSmallest(numbers) {
+  let smallest = numbers[0];
+  let arr = [...numbers];
+
+  if (numbers.length === 0) {
+    return [];
+  }
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (smallest > numbers[i]) {
+      smallest = numbers[i];     
+      
+    }
+  }
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (smallest === numbers[i]) {
+      arr.splice(i, 1);
+      break;
+
+    }
+  }
+  
+  
+  return arr;
+}
+console.log(removeSmallest([1,2,3,4,5]));
+
+// optimalus
+// function removeSmallest(numbers) {
+//   let indexOfMin = numbers.indexOf(Math.min(...numbers));
+//   return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
+// }
+
+console.clear();
+
+function startSmoking(bars,boxes){
+  let total = (bars * 10 + boxes) * 18;
+  console.log(total);
+  
+  let stubs = (bars * 10 + boxes) * 18;
+ 
+  let newCig = 0;
+  
+  
+ while (stubs > 5) {
+  newCig = Math.floor(stubs / 5);
+  stubs = stubs - newCig * 5;
+  stubs = stubs + newCig;
+  total = total + newCig;
+  
+ }
+
+
+  
+
+  return total;
+}
+console.log(startSmoking(10, 2));
+
+
+console.clear();
 
 
 
